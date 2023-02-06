@@ -5,10 +5,14 @@ import { CountDownTimer } from "../Index";
 import DiscountImage from "../../Assets/Images/DiscountImg.png";
 
 const Discount = () => {
+  const THREE_DAYS_IN_MS = 8 * 24 * 60 * 60 * 1000;
+  const NOW_IN_MS = new Date().getTime();
+
+  const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
   return (
     <div className="DiscountSection-Container">
       <div className="h-full w-[20%] flex flex-col items-center pt-3 lg:pt-10">
-        <CountDownTimer />
+        <CountDownTimer targetDate={dateTimeAfterThreeDays} />
         <img
           src={DiscountImage}
           alt=""

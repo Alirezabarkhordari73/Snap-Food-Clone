@@ -1,12 +1,11 @@
 import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 
-import { DownLoadSection, OwnerSection } from "../Components/Index";
+import { DownLoadSection, OwnerSection, Discount } from "../Components/Index";
 import { foodCategoryData } from "../data";
 import Layout from "../Components/Layout/Layout";
 
 const Home = () => {
-  const Discount = React.lazy(() => import("../Components/Index"));
   console.log(foodCategoryData);
 
   return (
