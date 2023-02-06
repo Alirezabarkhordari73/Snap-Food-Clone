@@ -1,0 +1,9 @@
+export { default as Footer } from "./Footer/Footer";
+export { default as Header } from "./Header/Header";
+export { default as Modal } from "./Modal/Modal";
+export { default as Map } from "./Map/Map";
+export { default as Banner } from "./Banner/Banner";
+export { default as DownLoadSection } from "./DownloadSection/DownLoadSection";
+export { default as OwnerSection } from "./OwnerSetcion/OwnerSection";
+export { default as Discount } from "./DiscountSection/Discount";
+export { default as CountDownTimer } from "./CountDownTimer/CountDownTimer";
