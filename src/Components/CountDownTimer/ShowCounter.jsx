@@ -6,7 +6,7 @@ const ShowCounter = ({ hours, minutes, seconds }) => {
     <div className=" w-[150px] flex justify-center items-center gap-3">
       <div
         id="demo"
-        className="text-white text-[1.4rem] tracking-[3px] font-semibold flex items-center justify-center">
+        className="text-white text-[1rem] lg:text-[1.3rem] tracking-[3px] font-semibold flex items-center justify-center">
         <p>{seconds}:</p>
         <p>{minutes}:</p>
         <p>{hours}</p>

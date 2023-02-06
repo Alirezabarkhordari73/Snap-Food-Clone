@@ -1,4 +1,10 @@
 import React from "react";
+import {
+  LazyLoadImage,
+  trackWindowScroll,
+} from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 import { IoIosArrowBack } from "react-icons/io";
 
 import { DownLoadSection, OwnerSection, Discount } from "../Components/Index";
@@ -17,10 +23,16 @@ const Home = () => {
             <div
               key={item.categoryId}
               className="relative w-[220px] h-[110px] md:w-[220px] lg:w-[210px] xl:w-[190px] Card-Shadow rounded-small cursor-pointer">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 src={item.categoryImage}
                 alt={item.name}
-                className="rounded-medium object-cover w-full h-full"
+                width={"100%"}
+                style={{
+                  objectFit: "cover",
+                  borderRadius: "10px",
+                  height: "110px",
+                }}
               />
               <div className="absolute flex justify-center items-center gap-1 bottom-0 right-0 bg-white w-24 h-8 rounded-small">
                 <h2>{item.name}</h2>
@@ -29,12 +41,15 @@ const Home = () => {
             </div>
           ))}
         </div>
+
         <Discount />
+
         <DownLoadSection />
+
         <OwnerSection />
       </div>
     </Layout>
   );
 };
 
-export default Home;
+export default trackWindowScroll(Home);

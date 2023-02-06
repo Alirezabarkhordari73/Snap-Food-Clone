@@ -11,14 +11,14 @@ const Discount = () => {
   const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
   return (
     <div className="DiscountSection-Container">
-      <div className="h-full w-[20%] flex flex-col items-center pt-3 lg:pt-10">
+      <div className="h-full w-[100%] lg:w-[20%] flex flex-col items-center pt-3 lg:pt-10">
         <CountDownTimer targetDate={dateTimeAfterThreeDays} />
         <img
           src={DiscountImage}
           alt=""
-          className="w-[130px] h-[130px] object-contain mt-3"
+          className="w-[120px] h-[120px] object-contain mt-1 lg:mt-3"
         />
-        <h1 className="text-[2rem] text-white font-extralight mt-5">
+        <h1 className="text-[2rem] text-white font-extralight mt-1 lg:mt-5">
           فود پارتی
         </h1>
         <p className="text-white text-small mt-4">تخفیفات لحظه ای ویژه شما</p>
