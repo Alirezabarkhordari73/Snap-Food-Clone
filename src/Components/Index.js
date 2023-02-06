@@ -8,3 +8,4 @@ export { default as OwnerSection } from "./OwnerSetcion/OwnerSection";
 export { default as Discount } from "./DiscountSection/Discount";
 export { default as CountDownTimer } from "./CountDownTimer/CountDownTimer";
 export { default as NewExperience } from "./NewExperienceSection/NewExperience";
+export { default as ResturantCategory } from "./ResturantCategory/ResturantCategory";
