@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
   font-family: "CustomFont";
   src: url("./Fonts/IRANSansMobile_Medium.ttf");
@@ -14,6 +15,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: rgb(255, 0, 255) !important;
+    fill: black !important;
+    stroke: black !important;
+    transform: scale(0.6);
+} 
 
 *{
   padding: 0;
@@ -50,23 +59,39 @@ body {
   height: 100%;
 }
 
-@layer components {
-   .Overlay {   
-     background-color: rgba(0, 0, 0, 0.26);
-     opacity: 0;
-     /* make things invisible upon start */
-     -webkit-animation: fadeIn ease-in 1;
-     /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-     -moz-animation: fadeIn ease-in 1;
-     animation: fadeIn ease-in 1;
-     -webkit-animation-fill-mode: forwards;
-     /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-     -moz-animation-fill-mode: forwards;
-     animation-fill-mode: forwards;
-     -webkit-animation-duration: 0.2s;
-     -moz-animation-duration: 0.2s;
-     animation-duration: 0.2s;
-   }
+@layer components { 
+  .overlay {  
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1;
+    /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 0.2s;
+    -moz-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+  }
+  .content{
+    position: fixed;
+    z-index: 2000;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
    .Card-Shadow{
     box-shadow: rgba(0, 0, 0, 0.226) 0px 5px 15px;
    }
@@ -99,11 +124,16 @@ body {
    }
    .DiscountSection-Container{
     position: relative;
+    display: flex;
     border-bottom-right-radius: 110px;
     width: 100%;
-    height: 470px;
+    height: 490px;
     margin-top: 12rem;
-    background: linear-gradient(326deg, rgb(214, 42, 157) 0%, rgb(255, 86, 151) 100%);
+    background: linear-gradient(326deg, rgb(197, 25, 140) 0%, rgb(255, 86, 151) 100%);
+   }
+   .my-swiper{
+    width: 100%;
+    height: 100%;
    }
 }
 
@@ -116,9 +146,10 @@ body {
    }
    .DiscountSection-Container{
     border-bottom-right-radius: 0;
+    height: 730px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
    }
 }

@@ -1,5 +1,7 @@
 import React from "react";
-import { Header, Footer, Banner } from "../Index";
+
+import { Header, Footer, Banner, Modal } from "../Index";
+import { useStateContext } from "../../Context/StateContext";
 
 const Layout = ({ children }) => {
   return (

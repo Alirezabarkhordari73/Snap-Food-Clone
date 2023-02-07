@@ -1,15 +1,15 @@
-import React from "react";
+import { createPortal } from "react-dom";
+import { useStateContext } from "../../Context/StateContext";
 
-const Modal = ({ children, setModalOneIsOpen }) => {
-  const eventHandler = () => {
-    setModalOneIsOpen(false);
-  };
-  return (
-    <div
-      className="Overlay w-full min-h-screen absolute top-0 right-0 flex justify-center items-start"
-      onClick={eventHandler}>
-      {children}
-    </div>
+const Modal = ({ children, ModalName }) => {
+  const { handleModal } = useStateContext();
+  return createPortal(
+    <div className="relative">
+      <div className="overlay" onClick={() => handleModal(ModalName)}>
+        {children}
+      </div>
+    </div>,
+    document.getElementById("modal")
   );
 };
 
