@@ -10,6 +10,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<AboutUs />} /> */}
           </Routes>
         </BrowserRouter>
       </ContextProvider>

@@ -3,7 +3,7 @@ import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 
 import { SliderComponents } from "../Index";
-import { newExperienceResturantData } from "../../data";
+import { withDiscountData } from "../../data";
 
 const WithDiscounts = () => {
   return (
@@ -20,7 +20,7 @@ const WithDiscounts = () => {
           </span>
         </a>
       </div>
-      <SliderComponents Data={newExperienceResturantData} />
+      <SliderComponents Data={withDiscountData} />
     </section>
   );
 };

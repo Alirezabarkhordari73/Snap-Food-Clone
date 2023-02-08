@@ -71,7 +71,7 @@ const SliderComponents = ({ Data }) => {
               <div className="w-[60%] p-2 flex justify-center items-center gap-4 Card-Shadow2 rounded-medium mt-6 text-small">
                 <p className="flex gap-2 items-center">
                   <RiEBike2Fill />
-                  ارسال اکسپرس
+                  <p>{item.deliveryType}</p>
                 </p>
                 <p>{item.deliveryPrice} تومان</p>
               </div>

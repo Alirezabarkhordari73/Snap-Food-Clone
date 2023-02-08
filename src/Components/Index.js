@@ -13,3 +13,4 @@ export { default as NewsExperienceSection } from "./NewsExperienceSection/NewsEx
 export { default as TopRateds } from "./TopRateds/TopRateds";
 export { default as SliderComponents } from "./SliderComponents/SliderComponents";
 export { default as WithDiscounts } from "./WithDiscounts/WithDiscounts";
+export { default as WithCoupon } from "./WithCoupon/WithCoupon";

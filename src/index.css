@@ -16,6 +16,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.rr{
+  padding: 4px;
+  overflow-y: scroll;
+  background-color: darkgoldenrod;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
     color: rgb(255, 0, 255) !important;
