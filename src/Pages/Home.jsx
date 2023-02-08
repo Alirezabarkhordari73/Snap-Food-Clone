@@ -8,6 +8,7 @@ import {
   NewsExperienceSection,
   TopRateds,
   WithDiscounts,
+  WithCoupon,
 } from "../Components/Index";
 import Layout from "../Components/Layout/Layout";
 
@@ -24,6 +25,8 @@ const Home = () => {
         <TopRateds />
 
         <WithDiscounts />
+
+        <WithCoupon />
 
         <DownLoadSection />
 

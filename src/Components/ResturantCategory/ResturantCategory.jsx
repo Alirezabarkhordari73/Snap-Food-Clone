@@ -14,7 +14,8 @@ const ResturantCategory = () => {
         {foodCategoryData.map((item) => (
           <div
             key={item.categoryId}
-            className="relative w-[220px] h-[110px] md:w-[220px] lg:w-[210px] xl:w-[190px] Card-Shadow rounded-small cursor-pointer">
+            className="relative w-[220px] h-[110px] md:w-[220px] lg:w-[210px] xl:w-[190px] Card-Shadow rounded-small cursor-pointer hover:Card-Shadow2 transition-shadow duration-200"
+          >
             <LazyLoadImage
               effect="blur"
               src={item.categoryImage}

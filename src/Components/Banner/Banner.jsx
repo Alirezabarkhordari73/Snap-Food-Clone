@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { bannerCategoryData } from "../../data";
 
@@ -8,12 +9,14 @@ const Banner = () => {
       <ul className="overflow-x-auto overflow-y-hidden flex xl:justify-between items-center gap-16 h-[6.5rem] px-8">
         {bannerCategoryData.map((item) => (
           <div key={item.title} className="cursor-pointer">
-            <img
-              src={item.imagePath}
-              alt="category"
-              className="w-[40px] h-[40px] object-contain"
-            />
-            <p className="text-[#3f3f3f] text-small">{item.title}</p>
+            <Link to={`resturants/${item.id}`}>
+              <img
+                src={item.imagePath}
+                alt="category"
+                className="w-[40px] h-[40px] object-contain"
+              />
+              <p className="text-[#3f3f3f] text-small">{item.title}</p>
+            </Link>
           </div>
         ))}
       </ul>

@@ -26,12 +26,37 @@ const DownLoadSection = () => {
           </form>
         </div>
         <div className="flex justify-start items-center gap-4 mt-8 flex-wrap">
-          <img src={AndroidBtn} className="w-[130px] object-fill" alt="" />
-          <img src={BazarBtn} className="w-[130px] object-fill" alt="" />
-          <img src={BazarBtn} className="w-[130px] object-fill" alt="" />
-          <img src={BazarBtn} className="w-[130px] object-fill" alt="" />
+          <a href="https://cafebazaar.ir/app/com.zoodfood.android">
+            <img
+              src={AndroidBtn}
+              className="w-[130px] object-fill cursor-pointer"
+              alt=""
+            />
+          </a>
+          <a href="https://cafebazaar.ir/app/com.zoodfood.android">
+            <img
+              src={BazarBtn}
+              className="w-[130px] object-fill cursor-pointer"
+              alt=""
+            />
+          </a>
+          <a href="https://cafebazaar.ir/app/com.zoodfood.android">
+            <img
+              src={BazarBtn}
+              className="w-[130px] object-fill cursor-pointer"
+              alt=""
+            />
+          </a>
+          <a href="https://cafebazaar.ir/app/com.zoodfood.android">
+            <img
+              src={BazarBtn}
+              className="w-[130px] object-fill cursor-pointer"
+              alt=""
+            />
+          </a>
         </div>
       </div>
+
       <div className="w-1/2">
         <img
           src={DownloadImage}
