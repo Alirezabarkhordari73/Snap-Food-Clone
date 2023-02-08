@@ -307,3 +307,76 @@ export const DiscountData = [
       "یک عدد همبرگر ۹۰ درصد با گوشت گوساله ۱۶۰ گرمی، کاهو، گوجه فرنگی، خیارشور، نان باگت، دو عدد سس تک نفره، سیب زمینی سرخ شده، و یک عدد نوشابه کوکا بطری",
   },
 ];
+
+export const newExperienceResturantData = [
+  {
+    id: 1,
+    resturantName: "مجنمع نان یاقوت",
+    resturantImage: "/images/NewExper/R1.jpg",
+    foodImage: "/images/NewExper/RF1.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "ایرانی , سنتی",
+    deliveryPrice: 18000,
+    rating: {
+      ratingValue: 4.5,
+      usersVotesCount: 231,
+    },
+    freeDeliverByOrder: true,
+  },
+  {
+    id: 2,
+    resturantName: "طباخی آمیرزا",
+    resturantImage: "/images/NewExper/R2.jpeg",
+    foodImage: "/images/NewExper/RF2.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "ایرانی , سنتی",
+    deliveryPrice: 6000,
+    rating: {
+      ratingValue: 4,
+      usersVotesCount: 161,
+    },
+    freeDeliverByOrder: true,
+  },
+  {
+    id: 3,
+    resturantName: "کافه دکتر کافی",
+    resturantImage: "/images/NewExper/R3.jpeg",
+    foodImage: "/images/NewExper/RF3.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "صبحانه,میان وعده,نوشیدنی گرم",
+    deliveryPrice: 8000,
+    rating: {
+      ratingValue: 4.5,
+      usersVotesCount: 76,
+    },
+    freeDeliverByOrder: false,
+  },
+  {
+    id: 4,
+    resturantName: "کافه رستوران گفتارخانه",
+    resturantImage: "/images/NewExper/R4.jpg",
+    foodImage: "/images/NewExper/RF4.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "ایرانی , سنتی",
+    deliveryPrice: 16000,
+    rating: {
+      ratingValue: 4.2,
+      usersVotesCount: 168,
+    },
+    freeDeliverByOrder: true,
+  },
+  {
+    id: 5,
+    resturantName: "قنادی هلر",
+    resturantImage: "/images/NewExper/R5.jpg",
+    foodImage: "/images/NewExper/RF5.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "ایرانی , سنتی",
+    deliveryPrice: 6000,
+    rating: {
+      ratingValue: 4.2,
+      usersVotesCount: 128,
+    },
+    freeDeliverByOrder: false,
+  },
+];
