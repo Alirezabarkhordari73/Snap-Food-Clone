@@ -6,6 +6,8 @@ import {
   Discount,
   ResturantCategory,
   NewsExperienceSection,
+  TopRateds,
+  WithDiscounts,
 } from "../Components/Index";
 import Layout from "../Components/Layout/Layout";
 
@@ -18,6 +20,10 @@ const Home = () => {
         <Discount />
 
         <NewsExperienceSection />
+
+        <TopRateds />
+
+        <WithDiscounts />
 
         <DownLoadSection />
 

@@ -10,3 +10,6 @@ export { default as CountDownTimer } from "./CountDownTimer/CountDownTimer";
 export { default as ResturantCategory } from "./ResturantCategory/ResturantCategory";
 export { default as DiscountDetails } from "./DiscountDetails/DiscountDetails";
 export { default as NewsExperienceSection } from "./NewsExperienceSection/NewsExperienceSection";
+export { default as TopRateds } from "./TopRateds/TopRateds";
+export { default as SliderComponents } from "./SliderComponents/SliderComponents";
+export { default as WithDiscounts } from "./WithDiscounts/WithDiscounts";
