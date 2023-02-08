@@ -25,6 +25,10 @@ export const ContextProvider = ({ children }) => {
     }
   };
 
+  function noLink(event) {
+    event.stopPropagation();
+  }
+
   return (
     <Store.Provider
       value={{
@@ -33,6 +37,7 @@ export const ContextProvider = ({ children }) => {
         handleModal,
         initialState,
         isModalClicked,
+        noLink,
       }}
     >
       {children}

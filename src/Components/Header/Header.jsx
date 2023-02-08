@@ -10,11 +10,7 @@ import { Map, Modal } from "../Index";
 import { useStateContext } from "../../Context/StateContext";
 
 const Header = () => {
-  const { handleModal, modalActivateState } = useStateContext();
-
-  function noLink(event) {
-    event.stopPropagation();
-  }
+  const { handleModal, modalActivateState, noLink } = useStateContext();
 
   return (
     <div className="sticky top-0 left-0 z-50">

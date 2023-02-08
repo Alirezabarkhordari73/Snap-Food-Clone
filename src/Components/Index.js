@@ -9,3 +9,5 @@ export { default as Discount } from "./DiscountSection/Discount";
 export { default as CountDownTimer } from "./CountDownTimer/CountDownTimer";
 export { default as NewExperience } from "./NewExperienceSection/NewExperience";
 export { default as ResturantCategory } from "./ResturantCategory/ResturantCategory";
+export { default as DiscountDetails } from "./DiscountDetails/DiscountDetails";
+export { default as NewsExperienceSection } from "./NewsExperienceSection/NewsExperienceSection";

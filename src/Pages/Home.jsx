@@ -5,6 +5,7 @@ import {
   OwnerSection,
   Discount,
   ResturantCategory,
+  NewsExperienceSection,
 } from "../Components/Index";
 import Layout from "../Components/Layout/Layout";
 
@@ -15,6 +16,8 @@ const Home = () => {
         <ResturantCategory />
 
         <Discount />
+
+        <NewsExperienceSection />
 
         <DownLoadSection />
 

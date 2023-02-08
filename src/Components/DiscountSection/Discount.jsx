@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import { CountDownTimer, Modal } from "../Index";
+import { CountDownTimer, Modal, DiscountDetails } from "../Index";
 import DiscountImage from "../../Assets/Images/DiscountImg.png";
 import { DiscountData } from "../../data";
 import { useStateContext } from "../../Context/StateContext";
@@ -127,11 +127,7 @@ const Discount = () => {
       </div>
       {modalActivateState.discountModal && (
         <Modal ModalName={"discountModal"}>
-          <div className="flex justify-center items-center">
-            <div className="w-[600px] h-[650px] bg-white rounded-medium">
-              <div>{DiscountData[selectedProductId - 1].foodName}</div>
-            </div>
-          </div>
+          <DiscountDetails selectedProductId={selectedProductId} />
         </Modal>
       )}
     </div>
