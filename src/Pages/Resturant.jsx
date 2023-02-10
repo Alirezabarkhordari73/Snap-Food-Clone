@@ -1,45 +1,62 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect, useLayoutEffect } from "react";
 
 import { BsFillPinAngleFill, BsFillStarFill } from "react-icons/bs";
 import { RiEBike2Fill } from "react-icons/ri";
 
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import {
+  LazyLoadImage,
+  trackWindowScroll,
+} from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import Layout from "../Components/Layout/Layout";
-import { Spinner, SideBar } from "../Components/Index";
+import { SideBar } from "../Components/Index";
 
 import { Store } from "../Context/ShopContext";
 
 const Resturant = () => {
-  const { filterData } = useContext(Store);
+  const { filterData, isFiltersBtnClicked } = useContext(Store);
   const [dataSource, setDataSource] = useState(filterData.slice(0, 9));
   const [hasMore, setHasMore] = useState(true);
+
   let targetIndexVal;
 
-  // console.log("dataSource", filterData);
+  //auto scroll to top
+  const ScrollToTopHandler = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  };
 
+  //infinit scroll functionality
   const fetchData = () => {
     if (dataSource.length < filterData.length) {
       setTimeout(() => {
-        if (dataSource.length + 10 >= filterData.length) {
+        if (dataSource.length + 7 >= filterData.length) {
           targetIndexVal =
             dataSource.length + (filterData.length - dataSource.length);
-          console.log("more", targetIndexVal);
         } else {
-          targetIndexVal = dataSource.length + 10;
-          console.log("less", targetIndexVal);
+          targetIndexVal = dataSource.length + 7;
         }
         setDataSource(
           dataSource.concat(filterData.slice(dataSource.length, targetIndexVal))
         );
-      }, 1000);
+      }, 1100);
     } else {
       setHasMore(false);
     }
   };
+
+  useLayoutEffect(() => {
+    if (isFiltersBtnClicked) {
+      ScrollToTopHandler();
+      setDataSource(filterData.slice(0, 9));
+    } else return;
+
+    return () => {
+      setDataSource(filterData.slice(0, 9));
+    };
+  }, [isFiltersBtnClicked, filterData]);
 
   return (
     <Layout>
@@ -53,18 +70,18 @@ const Resturant = () => {
               dataLength={dataSource.length}
               hasMore={hasMore}
               next={fetchData}
-              loader={
-                hasMore ? (
-                  <div className="w-full justify-center items-center p-5">
-                    <Spinner />
-                  </div>
-                ) : (
-                  ""
-                )
-              }
+              // loader={
+              //   hasMore ? (
+              //     <div className="w-full justify-center items-center p-5">
+              //       <Spinner />
+              //     </div>
+              //   ) : (
+              //     ""
+              //   )
+              // }
               className="grid grid-cols-1 lg:grid-cols-3 w-full gap-5 p-3"
             >
-              {filterData.map((item) => (
+              {dataSource.map((item) => (
                 <div
                   key={item.id}
                   className="bg-white relative w-[50%px] h-[400px] rounded-medium flex flex-col items-center justify-start cursor-pointer Card-Shadow2 hover:Card-Shadow3"
@@ -120,4 +137,4 @@ const Resturant = () => {
   );
 };
 
-export default Resturant;
+export default trackWindowScroll(Resturant);

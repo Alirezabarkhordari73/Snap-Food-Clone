@@ -1017,6 +1017,38 @@ export const allResturantData = [
     category: "رستوران-کافه",
     discount: true,
   },
+  {
+    id: 29,
+    resturantName: "آشپزخانه ظفر",
+    resturantImage: "/images/AllData/R6.jpg",
+    foodImage: "/images/AllData/RF6.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "سنتی ,ایرانی , خورشت",
+    deliveryPrice: 0,
+    rating: {
+      ratingValue: 4.8,
+      usersVotesCount: 200,
+    },
+    freeDeliverByOrder: true,
+    category: "رستوران",
+    discount: true,
+  },
+  {
+    id: 30,
+    resturantName: "رستوران ارغوان",
+    resturantImage: "/images/AllData/R7.png",
+    foodImage: "/images/AllData/RF7.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "سنتی ,ایرانی , کباب",
+    deliveryPrice: 12000,
+    rating: {
+      ratingValue: 4.8,
+      usersVotesCount: 300,
+    },
+    freeDeliverByOrder: true,
+    category: "رستوران",
+    discount: true,
+  },
 ];
 
 export const sideBarData = [

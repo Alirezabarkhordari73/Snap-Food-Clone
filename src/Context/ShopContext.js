@@ -5,6 +5,7 @@ import { allResturantData } from "../data";
 const initialState = {
   data: allResturantData,
   filterData: allResturantData,
+  isFiltersBtnClicked: false,
 };
 
 export const Store = createContext(initialState);
@@ -16,17 +17,28 @@ export const ShopStoreProvider = ({ children }) => {
         const withDiscountData = allResturantData.filter(
           (item) => item.discount === false
         );
-        return { ...state, filterData: withDiscountData };
+        return {
+          ...state,
+          filterData: withDiscountData,
+          isFiltersBtnClicked: true,
+        };
       case "GET_ALLDATA":
-        return { ...state, filterData: allResturantData };
+        return {
+          ...state,
+          filterData: allResturantData,
+          isFiltersBtnClicked: true,
+        };
       default:
         return state;
     }
   };
   const [shopState, dispatch] = useReducer(reducer, initialState);
   const filterData = shopState?.filterData;
+  const isFiltersBtnClicked = shopState?.isFiltersBtnClicked;
 
   return (
-    <Store.Provider value={{ filterData, dispatch }}>{children}</Store.Provider>
+    <Store.Provider value={{ filterData, dispatch, isFiltersBtnClicked }}>
+      {children}
+    </Store.Provider>
   );
 };
