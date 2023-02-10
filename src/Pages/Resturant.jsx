@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { BsFillPinAngleFill, BsFillStarFill } from "react-icons/bs";
 import { RiEBike2Fill } from "react-icons/ri";
@@ -11,28 +11,29 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Layout from "../Components/Layout/Layout";
 import { Spinner, SideBar } from "../Components/Index";
 
-import { allResturantData } from "../data";
+import { Store } from "../Context/ShopContext";
 
 const Resturant = () => {
-  const [dataSource, setDataSource] = useState(allResturantData.slice(0, 9));
+  const { filterData } = useContext(Store);
+  const [dataSource, setDataSource] = useState(filterData.slice(0, 9));
   const [hasMore, setHasMore] = useState(true);
   let targetIndexVal;
 
+  // console.log("dataSource", filterData);
+
   const fetchData = () => {
-    if (dataSource.length < allResturantData.length) {
+    if (dataSource.length < filterData.length) {
       setTimeout(() => {
-        if (dataSource.length + 10 >= allResturantData.length) {
+        if (dataSource.length + 10 >= filterData.length) {
           targetIndexVal =
-            dataSource.length + (allResturantData.length - dataSource.length);
+            dataSource.length + (filterData.length - dataSource.length);
           console.log("more", targetIndexVal);
         } else {
           targetIndexVal = dataSource.length + 10;
           console.log("less", targetIndexVal);
         }
         setDataSource(
-          dataSource.concat(
-            allResturantData.slice(dataSource.length, targetIndexVal)
-          )
+          dataSource.concat(filterData.slice(dataSource.length, targetIndexVal))
         );
       }, 1000);
     } else {
@@ -63,8 +64,11 @@ const Resturant = () => {
               }
               className="grid grid-cols-1 lg:grid-cols-3 w-full gap-5 p-3"
             >
-              {dataSource.map((item) => (
-                <div className="bg-white relative w-[50%px] h-[400px] rounded-medium flex flex-col items-center justify-start cursor-pointer Card-Shadow2 hover:Card-Shadow3">
+              {filterData.map((item) => (
+                <div
+                  key={item.id}
+                  className="bg-white relative w-[50%px] h-[400px] rounded-medium flex flex-col items-center justify-start cursor-pointer Card-Shadow2 hover:Card-Shadow3"
+                >
                   <div className="w-full h-[40%] rounded-t-medium overflow-hidden">
                     <LazyLoadImage
                       effect="blur"

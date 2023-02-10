@@ -583,6 +583,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 2,
@@ -598,6 +599,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: true,
   },
   {
     id: 3,
@@ -613,6 +615,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 4,
@@ -628,6 +631,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: true,
   },
   {
     id: 5,
@@ -643,6 +647,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: true,
   },
   {
     id: 6,
@@ -658,6 +663,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 7,
@@ -673,6 +679,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 8,
@@ -688,6 +695,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 9,
@@ -703,6 +711,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 10,
@@ -718,6 +727,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: true,
   },
   {
     id: 11,
@@ -733,6 +743,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 12,
@@ -748,6 +759,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 13,
@@ -763,6 +775,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 14,
@@ -778,6 +791,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: false,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 15,
@@ -793,6 +807,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: true,
   },
   {
     id: 16,
@@ -808,6 +823,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 17,
@@ -823,6 +839,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: false,
     category: "کافه",
+    discount: false,
   },
   {
     id: 18,
@@ -838,6 +855,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: false,
     category: "رستوران-کافه",
+    discount: true,
   },
   {
     id: 19,
@@ -853,6 +871,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: false,
   },
   {
     id: 20,
@@ -868,6 +887,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: false,
     category: "کافه",
+    discount: false,
   },
   {
     id: 21,
@@ -883,6 +903,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران-کافه",
+    discount: true,
   },
   {
     id: 22,
@@ -898,6 +919,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: true,
   },
   {
     id: 23,
@@ -913,6 +935,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: true,
   },
   {
     id: 24,
@@ -928,6 +951,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: false,
     category: "کافه",
+    discount: true,
   },
   {
     id: 25,
@@ -943,6 +967,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: false,
     category: "رستوران-کافه",
+    discount: true,
   },
   {
     id: 26,
@@ -958,6 +983,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران",
+    discount: true,
   },
   {
     id: 27,
@@ -973,6 +999,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: false,
     category: "کافه",
+    discount: true,
   },
   {
     id: 28,
@@ -988,6 +1015,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: "رستوران-کافه",
+    discount: true,
   },
 ];
 
