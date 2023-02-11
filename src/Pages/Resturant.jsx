@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect, useLayoutEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 import { BsFillPinAngleFill, BsFillStarFill } from "react-icons/bs";
 import { RiEBike2Fill } from "react-icons/ri";
@@ -9,23 +9,31 @@ import {
 } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "react-lazy-load-image-component/src/effects/opacity.css";
-import InfiniteScroll from "react-infinite-scroll-component";
 
 import Layout from "../Components/Layout/Layout";
 import { SideBar } from "../Components/Index";
 
-import { Store } from "../Context/ShopContext";
+import useShopStore from "../Utils/ShopSttore";
 
 const Resturant = () => {
-  const { filterData, isFiltersBtnClicked } = useContext(Store);
-  const [dataSource, setDataSource] = useState(filterData.slice(0, 9));
+  const [dataSource, setDataSource] = useState([]);
   const [hasMore, setHasMore] = useState(true);
 
-  let targetIndexVal;
+  const { filterData } = useShopStore((state) => ({
+    filterData: state.filterData,
+  }));
+  console.log("filterData", filterData);
 
+  let targetIndexVal;
   //auto scroll to top
-  const ScrollToTopHandler = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  const ScrollHandler = (e) => {
+    if (
+      window.innerHeight + e.target.documentElement.scrollTop + 1 >=
+        e.target.documentElement.scrollHeight &&
+      hasMore === true
+    ) {
+      fetchData();
+    } else return;
   };
 
   //infinit scroll functionality
@@ -41,22 +49,22 @@ const Resturant = () => {
         setDataSource(
           dataSource.concat(filterData.slice(dataSource.length, targetIndexVal))
         );
-      }, 1100);
+      }, 1000);
     } else {
       setHasMore(false);
     }
   };
+  useEffect(() => {
+    setDataSource(filterData.slice(0, 9));
+    setHasMore(true);
+  }, [filterData]);
 
-  useLayoutEffect(() => {
-    if (isFiltersBtnClicked) {
-      ScrollToTopHandler();
-      setDataSource(filterData.slice(0, 9));
-    } else return;
-
+  useEffect(() => {
+    window.addEventListener("scroll", ScrollHandler);
     return () => {
-      setDataSource(filterData.slice(0, 9));
+      window.removeEventListener("scroll", ScrollHandler);
     };
-  }, [isFiltersBtnClicked, filterData]);
+  }, [ScrollHandler]);
 
   return (
     <Layout>
@@ -66,21 +74,7 @@ const Resturant = () => {
         <div className="flex items-start justify-between">
           <SideBar />
           <div className="w-[100%]">
-            <InfiniteScroll
-              dataLength={dataSource.length}
-              hasMore={hasMore}
-              next={fetchData}
-              // loader={
-              //   hasMore ? (
-              //     <div className="w-full justify-center items-center p-5">
-              //       <Spinner />
-              //     </div>
-              //   ) : (
-              //     ""
-              //   )
-              // }
-              className="grid grid-cols-1 lg:grid-cols-3 w-full gap-5 p-3"
-            >
+            <section className="grid grid-cols-1 lg:grid-cols-3 w-full gap-5 p-3">
               {dataSource.map((item) => (
                 <div
                   key={item.id}
@@ -129,7 +123,7 @@ const Resturant = () => {
                   </div>
                 </div>
               ))}
-            </InfiniteScroll>
+            </section>
           </div>
         </div>
       </main>

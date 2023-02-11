@@ -1,10 +1,6 @@
-export const getWithDiscountData = (dispatch) => {
+export const checkBoxFilter = (dispatch, payload) => {
   dispatch({
-    type: "GET_WITHDISCOUNT",
-  });
-};
-export const getAllData = (dispatch) => {
-  dispatch({
-    type: "GET_ALLDATA",
+    type: "CHECKBOX_FILTER",
+    payload: payload,
   });
 };

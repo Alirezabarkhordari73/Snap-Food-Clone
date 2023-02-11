@@ -1,23 +1,20 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 
-import { Store } from "../../Context/ShopContext";
-import { getWithDiscountData, getAllData } from "../../Context/Actions";
 import { sideBarData } from "../../data";
-const SideBar = () => {
-  const { dispatch } = useContext(Store);
+import useShopStore from "../../Utils/ShopSttore";
 
-  const handleToggleBtn = (e) => {
-    console.log(e.target.checked);
-    if (e.target.checked === true) {
-      getWithDiscountData(dispatch);
-    }
-    if (e.target.checked === false) {
-      getAllData(dispatch);
-    }
+const SideBar = () => {
+  const { applyFilter, filterBtns } = useShopStore((state) => ({
+    applyFilter: state.applyFilter,
+    filterBtns: state.filterBtns,
+  }));
+
+  const handleChangeFunc = (btnname) => {
+    applyFilter(btnname);
   };
 
   return (
-    <div className="w-1/4 h-full flex flex-col justify-start items-center ml-4 top-[180px] right-0 sticky mb-5 mr-3">
+    <div className="w-1/4 h-full flex flex-col justify-start items-center ml-4 top-[180px] right-0 sticky mb-5 mr-3 gap-7">
       <div className="w-full h-[400px] rounded-medium Card-Shadow2 p-4 flex flex-col justify-between items-start">
         <div className="w-full rounded-medium py-4 px-2 bg-[#f1f1f1]">
           همه دسته بندی ها
@@ -41,7 +38,7 @@ const SideBar = () => {
             <input
               id="switch-input"
               type="checkbox"
-              onChange={(e) => handleToggleBtn(e)}
+              onChange={() => handleChangeFunc("discount")}
             />
             <span className="slider round"></span>
           </label>
@@ -49,14 +46,22 @@ const SideBar = () => {
         <div className="flex justify-between items-center w-full">
           <p className="text-[#929292]">دارای کوپن</p>
           <label className="switch">
-            <input id="switch-input" type="checkbox" />
+            <input
+              id="switch-input"
+              type="checkbox"
+              onChange={() => handleChangeFunc("coupon")}
+            />
             <span className="slider round"></span>
           </label>
         </div>
         <div className="flex justify-between items-center w-full">
           <p className="text-[#929292]">ارسال اکسپرس</p>
           <label className="switch">
-            <input id="switch-input" type="checkbox" />
+            <input
+              id="switch-input"
+              type="checkbox"
+              onChange={() => handleChangeFunc("express")}
+            />
             <span className="slider round"></span>
           </label>
         </div>
