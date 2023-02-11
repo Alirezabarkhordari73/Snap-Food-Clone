@@ -11,7 +11,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 
 import Layout from "../Components/Layout/Layout";
-import { SideBar } from "../Components/Index";
+import { SideBar, BreadCrumbs } from "../Components/Index";
 
 import useShopStore from "../Utils/ShopSttore";
 
@@ -68,7 +68,7 @@ const Resturant = () => {
 
   return (
     <Layout>
-      <div className="w-full h-7 mt-5">breadcrumbs</div>
+      <BreadCrumbs />
       <main className="w-full relative">
         <div className="w-full h-[70px]"></div>
         <div className="flex items-start justify-between">
@@ -115,10 +115,10 @@ const Resturant = () => {
                     {item.shortDescription}
                   </p>
                   <div className="w-[65%] p-2 flex justify-center items-center gap-4 Card-Shadow2 rounded-medium mt-6 text-small">
-                    <p className="flex gap-2 items-center">
+                    <div className="flex gap-2 items-center">
                       <RiEBike2Fill />
                       <p>{item.deliveryType}</p>
-                    </p>
+                    </div>
                     <p>{item.deliveryPrice} تومان</p>
                   </div>
                 </div>

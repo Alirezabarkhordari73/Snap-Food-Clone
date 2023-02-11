@@ -14,7 +14,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               {/* <Route path="/" element={<AboutUs />} /> */}
-              <Route path="resturants/:id" element={<Resturant />} />
+              <Route path="resturant/:id" element={<Resturant />} />
             </Routes>
           </BrowserRouter>
         </ContextProvider>

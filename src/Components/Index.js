@@ -16,3 +16,4 @@ export { default as WithDiscounts } from "./WithDiscounts/WithDiscounts";
 export { default as WithCoupon } from "./WithCoupon/WithCoupon";
 export { default as Spinner } from "./Spinner/Spinner";
 export { default as SideBar } from "./SideBar/SideBar";
+export { default as BreadCrumbs } from "./BreadCrumbs/BreadCrumbs";

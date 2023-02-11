@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Logo from "../../Assets/Images/Logo.png";
 import { CiSearch } from "react-icons/ci";
@@ -16,11 +17,13 @@ const Header = () => {
     <div className="sticky top-0 left-0 z-50">
       <div className="h-[4rem] flex items-center justify-between px-2 relative bg-white">
         <div className="w-[33.33%] flex justify-start items-center gap-5">
-          <img
-            src={Logo}
-            className="w-[67px] h-[67px] object-contain hidden lg:inline"
-            alt="logo"
-          />
+          <Link to="/">
+            <img
+              src={Logo}
+              className="w-[67px] h-[67px] object-contain hidden lg:inline"
+              alt="logo"
+            />
+          </Link>
 
           <div className="flex justify-start items-center gap-2">
             <MdOutlineMyLocation className="text-medium text-[#d6d6d6]" />
