@@ -676,7 +676,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["express"],
   },
   {
     id: 2,
@@ -695,7 +695,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "discount",
+    filterBtns: ["discount", "express", "coupon"],
   },
   {
     id: 3,
@@ -714,7 +714,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["express"],
   },
   {
     id: 4,
@@ -733,7 +733,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express", "coupon"],
   },
   {
     id: 5,
@@ -752,7 +752,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: [],
   },
   {
     id: 6,
@@ -771,7 +771,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount"],
   },
   {
     id: 7,
@@ -790,7 +790,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express", "coupon"],
   },
   {
     id: 8,
@@ -809,7 +809,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express", "coupon"],
   },
   {
     id: 9,
@@ -828,7 +828,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 10,
@@ -847,7 +847,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 11,
@@ -866,7 +866,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 12,
@@ -885,7 +885,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 13,
@@ -904,7 +904,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 14,
@@ -923,7 +923,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 15,
@@ -942,7 +942,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 16,
@@ -961,7 +961,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 17,
@@ -980,7 +980,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 18,
@@ -999,7 +999,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 19,
@@ -1018,7 +1018,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 20,
@@ -1037,7 +1037,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: false,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 21,
@@ -1056,7 +1056,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 22,
@@ -1075,7 +1075,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: false,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 23,
@@ -1094,7 +1094,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: false,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 24,
@@ -1113,7 +1113,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 25,
@@ -1132,7 +1132,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: false,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 26,
@@ -1151,7 +1151,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: false,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 27,
@@ -1170,7 +1170,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 28,
@@ -1189,7 +1189,7 @@ export const allResturantData = [
     discount: true,
     coupun: true,
     expressDelivery: false,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 29,
@@ -1208,7 +1208,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: true,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
   {
     id: 30,
@@ -1227,7 +1227,7 @@ export const allResturantData = [
     discount: false,
     coupun: true,
     expressDelivery: false,
-    filterBtns: "express",
+    filterBtns: ["discount", "express"],
   },
 ];
 
