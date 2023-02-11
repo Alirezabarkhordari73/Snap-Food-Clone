@@ -13,11 +13,13 @@ const Footer = () => {
     <div className="w-full min-h-[300px] bg-[#f5f5f5] flex-wrap lg:flex">
       <div className="basis-[45%] p-8">
         <div className="flex items-center gap-4">
-          <img
-            src={Logo}
-            className="w-[75px] h-[75px] object-contain hidden lg:inline"
-            alt="logo"
-          />
+          <Link to="/">
+            <img
+              src={Logo}
+              className="w-[75px] h-[75px] object-contain hidden lg:inline"
+              alt="logo"
+            />
+          </Link>
           <div>
             <h1 className="text-[hsl(321,100%,50%)] text-medium">اسنپ فود</h1>
             <p className="text-small text-[#818181]">
@@ -45,7 +47,7 @@ const Footer = () => {
       </div>
       <div className="flex basis-[30%] p-8 gap-16">
         <ul className="flex flex-col text-small text-[#818181] space-y-3">
-          <Link to="">درباره اسنپ فود</Link>
+          <Link to="/about-us">درباره اسنپ فود</Link>
           <Link to="">همکاری با ما</Link>
           <Link to="">وبلاگ</Link>
           <Link to="">قوانین سایت</Link>
@@ -61,8 +63,8 @@ const Footer = () => {
       </div>
       <div className="basis-[20%] p-8">
         <div className="flex justify-center">
-          <img src={Etemad} />
-          <img src={Etemad} />
+          <img src={Etemad} alt="etemad" />
+          <img src={Etemad} alt="etemad" />
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 
 import Layout from "../Components/Layout/Layout";
-import { SideBar, BreadCrumbs } from "../Components/Index";
+import { SideBar, BreadCrumbs, Banner } from "../Components/Index";
 
 import useShopStore from "../Utils/ShopSttore";
 
@@ -68,6 +68,7 @@ const Resturant = () => {
 
   return (
     <Layout>
+      <Banner />
       <BreadCrumbs />
       <main className="w-full relative">
         <div className="w-full h-[70px]"></div>
