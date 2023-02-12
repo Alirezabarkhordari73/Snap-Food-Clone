@@ -77,7 +77,9 @@ const Footer = () => {
           <Link to="">ثبت نام فروشندگان</Link>
         </ul>
         <ul className="flex flex-col text-small text-[#818181] space-y-3">
-          <Link to="/contact-us">تماس با اسنپ فود</Link>
+          <Link to="/contact-us" target="_blank">
+            تماس با اسنپ فود
+          </Link>
           <Link to="">پرسش های متداول</Link>
           <Link to="">ثبت شکایات</Link>
           <Link to="">اپلیکیشن موبایل</Link>

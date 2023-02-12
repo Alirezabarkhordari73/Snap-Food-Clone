@@ -4,9 +4,8 @@ import { sideBarData } from "../../data";
 import useShopStore from "../../Utils/ShopSttore";
 
 const SideBar = () => {
-  const { applyFilter, filterBtns } = useShopStore((state) => ({
+  const { applyFilter } = useShopStore((state) => ({
     applyFilter: state.applyFilter,
-    filterBtns: state.filterBtns,
   }));
 
   const handleChangeFunc = (btnname) => {

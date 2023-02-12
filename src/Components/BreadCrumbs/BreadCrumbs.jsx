@@ -14,7 +14,7 @@ const BreadCrumbs = () => {
     .map((crumb) => {
       currentLink += `/${crumb}`;
       return (
-        <div className="flex justify-center items-center gap-2">
+        <div className="flex justify-center items-center gap-2" key={crumb}>
           <IoIosArrowBack />
           <Link to={currentLink}>{crumb}</Link>
         </div>

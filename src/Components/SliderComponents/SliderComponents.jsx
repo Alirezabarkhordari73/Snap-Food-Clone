@@ -69,10 +69,10 @@ const SliderComponents = ({ Data }) => {
                 {item.shortDescription}
               </p>
               <div className="w-[60%] p-2 flex justify-center items-center gap-4 Card-Shadow2 rounded-medium mt-6 text-small">
-                <p className="flex gap-2 items-center">
+                <div className="flex gap-2 items-center">
                   <RiEBike2Fill />
                   <p>{item.deliveryType}</p>
-                </p>
+                </div>
                 <p>{item.deliveryPrice} تومان</p>
               </div>
             </div>

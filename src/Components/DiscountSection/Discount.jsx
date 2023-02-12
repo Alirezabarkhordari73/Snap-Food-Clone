@@ -42,7 +42,10 @@ const Discount = () => {
   return (
     <div className="DiscountSection-Container">
       <div className="h-[50%] md:h-full w-[100%] md:w-[20%] flex flex-col items-center pt-3 lg:pt-10">
-        <CountDownTimer targetDate={dateTimeAfterThreeDays} />
+        <CountDownTimer
+          targetDate={dateTimeAfterThreeDays}
+          textColor={"#fff"}
+        />
         <img
           src={DiscountImage}
           alt="DiscountImage"

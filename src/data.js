@@ -55,6 +55,7 @@ export const foodCategoryData = [
   {
     categoryId: 1,
     name: "ایرانی",
+    routName: "irani",
     categoryImage: "/images/Cimage/R1.jpg",
     rsturantData: [
       {
@@ -78,6 +79,7 @@ export const foodCategoryData = [
   {
     categoryId: 2,
     name: "فست فود",
+    routName: "fast-food",
     categoryImage: "/images/Cimage/R2.jpg",
     rsturantData: [
       {
@@ -93,6 +95,7 @@ export const foodCategoryData = [
   {
     categoryId: 3,
     name: "کباب",
+    routName: "kabab",
     categoryImage: "/images/Cimage/R3.jpg",
     rsturantData: [
       {
@@ -108,6 +111,7 @@ export const foodCategoryData = [
   {
     categoryId: 4,
     name: "پیتزا",
+    routName: "pitza",
     categoryImage: "/images/Cimage/R4.jpg",
     rsturantData: [
       {
@@ -123,6 +127,7 @@ export const foodCategoryData = [
   {
     categoryId: 5,
     name: "برگر",
+    routName: "berger",
     categoryImage: "/images/Cimage/R5.jpg",
     rsturantData: [
       {
@@ -138,6 +143,7 @@ export const foodCategoryData = [
   {
     categoryId: 6,
     name: "ساندویچ",
+    routName: "sandwich",
     categoryImage: "/images/Cimage/R6.jpg",
     rsturantData: [
       {
@@ -153,6 +159,7 @@ export const foodCategoryData = [
   {
     categoryId: 7,
     name: "سوخاری",
+    routName: "sokhari",
     categoryImage: "/images/Cimage/R7.jpg",
     rsturantData: [
       {
@@ -168,6 +175,7 @@ export const foodCategoryData = [
   {
     categoryId: 8,
     name: "پاستا",
+    routName: "pasta",
     categoryImage: "/images/Cimage/R8.jpg",
     rsturantData: [
       {
@@ -183,6 +191,7 @@ export const foodCategoryData = [
   {
     categoryId: 9,
     name: "سالاد",
+    routName: "salad",
     categoryImage: "/images/Cimage/R9.jpg",
     rsturantData: [
       {
@@ -198,6 +207,7 @@ export const foodCategoryData = [
   {
     categoryId: 10,
     name: "دریایی",
+    routName: "sea",
     categoryImage: "/images/Cimage/R10.jpg",
     rsturantData: [
       {
@@ -213,6 +223,7 @@ export const foodCategoryData = [
   {
     categoryId: 11,
     name: "بین الملل",
+    routName: "international",
     categoryImage: "/images/Cimage/R11.jpg",
     rsturantData: [
       {
@@ -228,6 +239,7 @@ export const foodCategoryData = [
   {
     categoryId: 12,
     name: "گیلانی",
+    routName: "gilani",
     categoryImage: "/images/Cimage/R12.jpg",
     rsturantData: [
       {
@@ -253,6 +265,15 @@ export const DiscountData = [
     countInStock: 82,
     rate: 3.5,
     foodIngredients: "خمیر پیتزا آمریکایی، سالامی، قارچ، پنیر پارمسان",
+    comments: [
+      {
+        name: "سجاد",
+        message: "کباب خیلی کوچیک و کم حجم بود برنج عالی طعم کباب متوسط",
+        creationDate: new Date().toLocaleDateString(),
+        rate: 4,
+        buyProducts: ["جوجه کباب"],
+      },
+    ],
   },
   {
     id: 2,
@@ -266,6 +287,15 @@ export const DiscountData = [
     rate: 3.9,
     foodIngredients:
       "خمیر پیتزا ایتالیایی، ژامبون گوشت و مرغ، سس مخصوص، زیتون اسلایسی، فلفل دلمه ای، ذرت، پنیر مخصوص، سس تک نفره",
+    comments: [
+      {
+        name: "سجاد",
+        message: "کباب خیلی کوچیک و کم حجم بود برنج عالی طعم کباب متوسط",
+        creationDate: new Date().toLocaleDateString(),
+        rate: 4,
+        buyProducts: ["جوجه کباب"],
+      },
+    ],
   },
   {
     id: 3,
@@ -278,6 +308,15 @@ export const DiscountData = [
     countInStock: 32,
     rate: 4.5,
     foodIngredients: "۲۰۰ گرم گوشت گوسفندی، برنج ایرانی، مخلفات",
+    comments: [
+      {
+        name: "سجاد",
+        message: "کباب خیلی کوچیک و کم حجم بود برنج عالی طعم کباب متوسط",
+        creationDate: new Date().toLocaleDateString(),
+        rate: 4,
+        buyProducts: ["جوجه کباب"],
+      },
+    ],
   },
   {
     id: 4,
@@ -291,6 +330,15 @@ export const DiscountData = [
     rate: 3.5,
     foodIngredients:
       "۱۱۰ گرم ماهیچه گوساله، ۳۵۰ گرم ته چین باقالی پلو قالبی با برنج ایرانی",
+    comments: [
+      {
+        name: "سجاد",
+        message: "کباب خیلی کوچیک و کم حجم بود برنج عالی طعم کباب متوسط",
+        creationDate: new Date().toLocaleDateString(),
+        rate: 4,
+        buyProducts: ["جوجه کباب"],
+      },
+    ],
   },
   {
     id: 5,
@@ -304,6 +352,15 @@ export const DiscountData = [
     rate: 4.5,
     foodIngredients:
       "خمیر پیتزا کلاسیک ۲۳ سانتی‌ متری، ژامبون گوشت و مرغ، هات داگ فرانکفورتر، قارچ، زیتون، گوجه فرنگی، فلفل دلمه‌ ای",
+    comments: [
+      {
+        name: "سجاد",
+        message: "کباب خیلی کوچیک و کم حجم بود برنج عالی طعم کباب متوسط",
+        creationDate: new Date().toLocaleDateString(),
+        rate: 4,
+        buyProducts: ["جوجه کباب"],
+      },
+    ],
   },
   {
     id: 6,
@@ -317,6 +374,15 @@ export const DiscountData = [
     rate: 4.5,
     foodIngredients:
       "یک عدد برگر دست ساز گوشت گوساله ۲۲۰ گرمی، فیله مرغ، بیکن ۸۰%، پنیر گودا و قارچ، نان گرد",
+    comments: [
+      {
+        name: "سجاد",
+        message: "کباب خیلی کوچیک و کم حجم بود برنج عالی طعم کباب متوسط",
+        creationDate: new Date().toLocaleDateString(),
+        rate: 4,
+        buyProducts: ["جوجه کباب"],
+      },
+    ],
   },
   {
     id: 7,
@@ -330,6 +396,15 @@ export const DiscountData = [
     rate: 4.5,
     foodIngredients:
       "یک سیخ جوجه کباب ران مرغ با استخوان زعفرانی ۴۵۰ گرمی، ۳۵۰ گرم برنج ایرانی، گوجه کبابی",
+    comments: [
+      {
+        name: "سجاد",
+        message: "کباب خیلی کوچیک و کم حجم بود برنج عالی طعم کباب متوسط",
+        creationDate: new Date().toLocaleDateString(),
+        rate: 4,
+        buyProducts: ["جوجه کباب"],
+      },
+    ],
   },
   {
     id: 8,
@@ -343,6 +418,29 @@ export const DiscountData = [
     rate: 3.5,
     foodIngredients:
       "۸ تکه بال مرغ کبابی زعفرانی، گوجه کبابی، دورچین روز، یک عدد نان لواش یا نصف نان سنگک",
+    comments: [
+      {
+        name: "سجاد",
+        message: "کباب خیلی کوچیک و کم حجم بود برنج عالی طعم کباب متوسط",
+        creationDate: new Date().toLocaleDateString(),
+        rate: 4,
+        buyProducts: ["جوجه کباب"],
+      },
+      {
+        name: "سجاد",
+        message: "کباب خیلی کوچیک و کم حجم بود برنج عالی طعم کباب متوسط",
+        creationDate: new Date().toLocaleDateString(),
+        rate: 4,
+        buyProducts: ["جوجه کباب"],
+      },
+      {
+        name: "سجاد",
+        message: "کباب خیلی کوچیک و کم حجم بود برنج عالی طعم کباب متوسط",
+        creationDate: new Date().toLocaleDateString(),
+        rate: 4,
+        buyProducts: ["جوجه کباب"],
+      },
+    ],
   },
 ];
 
@@ -700,10 +798,7 @@ export const allResturantData = [
       usersVotesCount: 120,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران"],
     filterBtns: ["express"],
   },
   {
@@ -719,10 +814,7 @@ export const allResturantData = [
       usersVotesCount: 161,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: true,
-    coupun: true,
-    expressDelivery: true,
+    category: ["ایرانی", "رستوران"],
     filterBtns: ["discount", "express", "coupon"],
   },
   {
@@ -738,10 +830,7 @@ export const allResturantData = [
       usersVotesCount: 70,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["ایرانی", "رستوران"],
     filterBtns: ["express"],
   },
   {
@@ -757,10 +846,7 @@ export const allResturantData = [
       usersVotesCount: 168,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: true,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران"],
     filterBtns: ["discount", "express", "coupon"],
   },
   {
@@ -776,10 +862,7 @@ export const allResturantData = [
       usersVotesCount: 120,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: true,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران"],
     filterBtns: [],
   },
   {
@@ -795,10 +878,7 @@ export const allResturantData = [
       usersVotesCount: 161,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["ایرانی", "رستوران"],
     filterBtns: ["discount"],
   },
   {
@@ -814,10 +894,7 @@ export const allResturantData = [
       usersVotesCount: 70,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["ایرانی", "رستوران"],
     filterBtns: ["discount", "express", "coupon"],
   },
   {
@@ -833,10 +910,7 @@ export const allResturantData = [
       usersVotesCount: 168,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران"],
     filterBtns: ["discount", "express", "coupon"],
   },
   {
@@ -852,10 +926,7 @@ export const allResturantData = [
       usersVotesCount: 120,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -871,10 +942,7 @@ export const allResturantData = [
       usersVotesCount: 161,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: true,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -890,10 +958,7 @@ export const allResturantData = [
       usersVotesCount: 70,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -909,10 +974,7 @@ export const allResturantData = [
       usersVotesCount: 168,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -928,10 +990,7 @@ export const allResturantData = [
       usersVotesCount: 120,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -947,10 +1006,7 @@ export const allResturantData = [
       usersVotesCount: 161,
     },
     freeDeliverByOrder: false,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -966,10 +1022,7 @@ export const allResturantData = [
       usersVotesCount: 70,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: true,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -985,10 +1038,7 @@ export const allResturantData = [
       usersVotesCount: 168,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["ایرانی", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1004,10 +1054,7 @@ export const allResturantData = [
       usersVotesCount: 118,
     },
     freeDeliverByOrder: false,
-    category: "کافه",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["کافه", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1023,10 +1070,7 @@ export const allResturantData = [
       usersVotesCount: 180,
     },
     freeDeliverByOrder: false,
-    category: "رستوران-کافه",
-    discount: true,
-    coupun: true,
-    expressDelivery: true,
+    category: ["کافه", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1042,10 +1086,7 @@ export const allResturantData = [
       usersVotesCount: 180,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["ایرانی", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1061,10 +1102,7 @@ export const allResturantData = [
       usersVotesCount: 210,
     },
     freeDeliverByOrder: false,
-    category: "کافه",
-    discount: false,
-    coupun: true,
-    expressDelivery: false,
+    category: ["کافه", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1080,10 +1118,7 @@ export const allResturantData = [
       usersVotesCount: 220,
     },
     freeDeliverByOrder: true,
-    category: "رستوران-کافه",
-    discount: true,
-    coupun: true,
-    expressDelivery: true,
+    category: ["فست فود", "رستوران", "ایرانی"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1099,10 +1134,7 @@ export const allResturantData = [
       usersVotesCount: 70,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: true,
-    coupun: true,
-    expressDelivery: false,
+    category: ["فست فود", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1118,10 +1150,7 @@ export const allResturantData = [
       usersVotesCount: 168,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: true,
-    coupun: true,
-    expressDelivery: false,
+    category: ["ایرانی", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1137,10 +1166,7 @@ export const allResturantData = [
       usersVotesCount: 118,
     },
     freeDeliverByOrder: false,
-    category: "کافه",
-    discount: true,
-    coupun: true,
-    expressDelivery: true,
+    category: ["کافه", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1156,10 +1182,7 @@ export const allResturantData = [
       usersVotesCount: 180,
     },
     freeDeliverByOrder: false,
-    category: "رستوران-کافه",
-    discount: true,
-    coupun: true,
-    expressDelivery: false,
+    category: ["کافه", "رستوران", "ایرانی"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1175,10 +1198,7 @@ export const allResturantData = [
       usersVotesCount: 180,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: false,
+    category: ["ایرانی", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1194,10 +1214,7 @@ export const allResturantData = [
       usersVotesCount: 210,
     },
     freeDeliverByOrder: false,
-    category: "کافه",
-    discount: true,
-    coupun: true,
-    expressDelivery: true,
+    category: ["کافه", "رستوران", "شیرینی"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1213,10 +1230,7 @@ export const allResturantData = [
       usersVotesCount: 220,
     },
     freeDeliverByOrder: true,
-    category: "رستوران-کافه",
-    discount: true,
-    coupun: true,
-    expressDelivery: false,
+    category: ["کافه", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1232,10 +1246,7 @@ export const allResturantData = [
       usersVotesCount: 200,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: true,
+    category: ["ایرانی", "رستوران"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1251,10 +1262,23 @@ export const allResturantData = [
       usersVotesCount: 300,
     },
     freeDeliverByOrder: true,
-    category: "رستوران",
-    discount: false,
-    coupun: true,
-    expressDelivery: false,
+    category: ["ایرانی", "رستوران"],
+    filterBtns: ["discount", "express"],
+  },
+  {
+    id: 31,
+    resturantName: "کترینگ سیب",
+    resturantImage: "/images/AllData/R8.jpg",
+    foodImage: "/images/AllData/RF8.png",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "سنتی ,ایرانی , کباب",
+    deliveryPrice: 12000,
+    rating: {
+      ratingValue: 4.8,
+      usersVotesCount: 300,
+    },
+    freeDeliverByOrder: true,
+    category: ["ایرانی", "رستوران"],
     filterBtns: ["discount", "express"],
   },
 ];

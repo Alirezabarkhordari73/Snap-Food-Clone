@@ -21,19 +21,27 @@ const useShopStore = create((set) => ({
         .filter((item) => item.checked === true)
         .map((item) => item.label.toLowerCase());
       let filterDataList;
-      console.log("filterBtnsList", filterBtnsList);
+
       if (filterBtnsList.length) {
-        console.log("filterBtnsList", filterBtnsList);
         filterDataList = state.filterData.filter((item) =>
           item.filterBtns.some((item) => filterBtnsList.includes(item))
         );
       } else {
-        console.log("filterBtnsList2", filterBtnsList);
         filterDataList = allResturantData;
       }
       return {
         filterBtns: filterBtns,
         filterData: filterDataList,
+      };
+    });
+  },
+  filterByCategory: (categoryname) => {
+    set((state) => {
+      const iraniData = state.filterData.filter((item) =>
+        item.category.includes(categoryname)
+      );
+      return {
+        filterData: iraniData,
       };
     });
   },

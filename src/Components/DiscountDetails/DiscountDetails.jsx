@@ -84,11 +84,28 @@ const DiscountDetails = ({ selectedProductId }) => {
               </div>
             </div>
           </div>
-          <h1 className="mt-5">نظرات کاربران</h1>
-          <div className="w-full h-full mt-2 flex justify-center">
-            <div className="w-1/3 h-[400px"></div>
-            <div className="w-2/3 h-[400px]"></div>
+          <h1 className="mt-4">نظرات کاربران</h1>
+          <div className="w-full mt-10">
+            {DiscountData[selectedProductId - 1].comments.map((item) => (
+              <div className="w-full flex justify-between border-b-[1px] border-[#cecece] pb-4 mb-5">
+                <div className="w-1/3 flex flex-col gap-2 items-start">
+                  <p>{item.name}</p>
+                  <span>{item.creationDate}</span>
+                  <div className="w-10 flex items-center bg-white Card-Shadow2 text-small gap-1 p-1 rounded-small">
+                    <BsFillStarFill className="text-yellow-500 text-small" />
+                    {item.rate}
+                  </div>
+                </div>
+                <div className="w-full flex flex-col gap-3">
+                  <p className="text-[#6b6b6b]">{item.message}</p>
+                  <div className="bg-[#eeeeee] text-[#a0a0a0] w-[30%] p-1 rounded-small text-small flex justify-center items-center">
+                    {item.buyProducts}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
+          <div className="w-2/3 h-[400px]"></div>
         </div>
       </div>
     </div>

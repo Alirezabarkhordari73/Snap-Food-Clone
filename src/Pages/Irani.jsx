@@ -6,14 +6,16 @@ import { SideBar, BreadCrumbs, Banner, ShowContent } from "../Components/Index";
 import useShopStore from "../Utils/ShopSttore";
 import { fetchMoreData } from "../Utils/FetchMoreData";
 
-const Resturant = () => {
+const Irani = () => {
   const [dataSource, setDataSource] = useState([]);
   const [hasMore, setHasMore] = useState(true);
 
-  const { filterData } = useShopStore((state) => ({
+  const { filterData, filterByCategory } = useShopStore((state) => ({
     filterData: state.filterData,
+    filterByCategory: state.filterByCategory,
   }));
 
+  console.log("filterByCategoryData", filterData);
   //auto scroll to top
   const ScrollHandler = useCallback(
     (e) => {
@@ -29,6 +31,10 @@ const Resturant = () => {
   );
 
   useEffect(() => {
+    filterByCategory("ایرانی");
+  }, []);
+
+  useEffect(() => {
     setDataSource(filterData.slice(0, 9));
     setHasMore(true);
   }, [filterData]);
@@ -39,7 +45,6 @@ const Resturant = () => {
       window.removeEventListener("scroll", ScrollHandler);
     };
   }, [ScrollHandler]);
-
   return (
     <Layout>
       <Banner />
@@ -55,4 +60,4 @@ const Resturant = () => {
   );
 };
 
-export default Resturant;
+export default Irani;

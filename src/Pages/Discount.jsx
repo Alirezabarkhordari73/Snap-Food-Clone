@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { IoIosArrowBack } from "react-icons/io";
 import { BsFillStarFill } from "react-icons/bs";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -8,18 +7,45 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 
 import Layout from "../Components/Layout/Layout";
+import { Modal, DiscountDetails, CountDownTimer } from "../Components/Index";
+import { useStateContext } from "../Context/StateContext";
 
 import { DiscountData } from "../data";
 
 const Discount = () => {
+  const { handleModal, modalActivateState, isModalClicked } = useStateContext();
+  const [selectedProductId, setselectedProductId] = useState(0);
+
+  const THREE_DAYS_IN_MS = 8 * 24 * 60 * 60 * 1000;
+  const NOW_IN_MS = new Date().getTime();
+  const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
+
+  const modalEventsHandler = (id) => {
+    setselectedProductId(id);
+    handleModal("discountModal");
+  };
+
+  //check if modal is open add hidden overflow style to body tag
+  if (isModalClicked) {
+    document.body.style.overflowY = "hidden";
+  } else {
+    document.body.style.overflowY = "scroll";
+  }
+
   return (
     <Layout>
       <div className="p-10">
-        <div></div>
+        <div className="w-full flex justify-between items-center my-3">
+          <h1 className="text-medium">فودپارتی</h1>
+          <CountDownTimer
+            targetDate={dateTimeAfterThreeDays}
+            textColor={"#ff00a6"}
+          />
+        </div>
         <div className="w-full grid grid-cols-4 gap-10">
           {DiscountData.map((item) => (
             <div
-              //   onClick={() => modalEventsHandler(item.id)}
+              onClick={() => modalEventsHandler(item.id)}
               key={item.id}
               className="bg-white w-[50%px] Card-Shadow2 h-full rounded-medium flex flex-col items-center p-2 cursor-pointer"
             >
@@ -62,7 +88,7 @@ const Discount = () => {
                   </div>
                 </div>
                 <div>
-                  <span className="bg-[hsl(321,100%,50%)] px-[5px] py-[1px] text-small text-white rounded-small">
+                  <span className="bg-[#ff00a6] px-[5px] py-[1px] text-small text-white rounded-small">
                     %{item.discountRange}
                   </span>
                   <p>{item.price} تومان</p>
@@ -72,6 +98,11 @@ const Discount = () => {
             </div>
           ))}
         </div>
+        {modalActivateState.discountModal && (
+          <Modal ModalName={"discountModal"}>
+            <DiscountDetails selectedProductId={selectedProductId} />
+          </Modal>
+        )}
       </div>
     </Layout>
   );

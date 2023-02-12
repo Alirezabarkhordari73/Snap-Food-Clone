@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, LinK } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -12,7 +13,8 @@ const ResturantCategory = () => {
       <h1 className="font-bold">دسته بندی ها</h1>
       <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 justify-items-center mt-5">
         {foodCategoryData.map((item) => (
-          <div
+          <Link
+            to={item.routName}
             key={item.categoryId}
             className="relative w-[220px] h-[110px] md:w-[220px] lg:w-[210px] xl:w-[190px] Card-Shadow rounded-small cursor-pointer hover:Card-Shadow2 transition-shadow duration-200"
           >
@@ -31,7 +33,7 @@ const ResturantCategory = () => {
               <h2>{item.name}</h2>
               <IoIosArrowBack className="text-[hsl(321,100%,50%)]" />
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
