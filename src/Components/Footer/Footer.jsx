@@ -28,26 +28,48 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex items-center justify-center gap-5 text-medium mt-5">
-          <span className="Icon-Container">
+          <Link
+            to="https://twitter.com/snappfood"
+            target="_blank"
+            className="Icon-Container"
+          >
             <AiOutlineTwitter />
-          </span>
-          <span className="Icon-Container">
+          </Link>
+          <Link
+            to="https://www.linkedin.com/company/snappfood"
+            target="_blank"
+            className="Icon-Container"
+          >
             <FaLinkedinIn />
-          </span>
-          <span className="Icon-Container">
+          </Link>
+          <Link
+            to="https://www.instagram.com/snappfood_ir/"
+            target="_blank"
+            className="Icon-Container"
+          >
             <BsInstagram />
-          </span>
-          <span className="Icon-Container">
+          </Link>
+          <Link
+            to="https://t.me/snappfood"
+            target="_blank"
+            className="Icon-Container"
+          >
             <FaTelegramPlane />
-          </span>
-          <span className="Icon-Container">
+          </Link>
+          <Link
+            to="https://www.aparat.com/snappfood"
+            target="_blank"
+            className="Icon-Container"
+          >
             <SiAparat />
-          </span>
+          </Link>
         </div>
       </div>
       <div className="flex basis-[30%] p-8 gap-16">
         <ul className="flex flex-col text-small text-[#818181] space-y-3">
-          <Link to="/about-us">درباره اسنپ فود</Link>
+          <Link to="/about-us" target="_blank">
+            درباره اسنپ فود
+          </Link>
           <Link to="">همکاری با ما</Link>
           <Link to="">وبلاگ</Link>
           <Link to="">قوانین سایت</Link>
@@ -55,7 +77,7 @@ const Footer = () => {
           <Link to="">ثبت نام فروشندگان</Link>
         </ul>
         <ul className="flex flex-col text-small text-[#818181] space-y-3">
-          <Link to="">تماس با اسنپ فود</Link>
+          <Link to="/contact-us">تماس با اسنپ فود</Link>
           <Link to="">پرسش های متداول</Link>
           <Link to="">ثبت شکایات</Link>
           <Link to="">اپلیکیشن موبایل</Link>
