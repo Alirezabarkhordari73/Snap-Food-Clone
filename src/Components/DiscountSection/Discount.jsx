@@ -17,6 +17,7 @@ import { CountDownTimer, Modal, DiscountDetails } from "../Index";
 import DiscountImage from "../../Assets/Images/DiscountImg.png";
 import { DiscountData } from "../../data";
 import { useStateContext } from "../../Context/StateContext";
+import { Link } from "react-router-dom";
 
 const Discount = () => {
   const { handleModal, modalActivateState, isModalClicked } = useStateContext();
@@ -54,7 +55,7 @@ const Discount = () => {
           تخفیفات لحظه ای ویژه شما
         </p>
         <button className="bg-white text-black w-[180px] h-[2.2rem] flex items-center justify-center gap-2 rounded-medium mt-5">
-          <p>مشاهده همه</p>
+          <Link to="/discount-page">مشاهده همه</Link>
           <IoIosArrowBack className="text-[hsl(321,100%,50%)]" />
         </button>
       </div>
@@ -98,7 +99,7 @@ const Discount = () => {
                     }}
                   />
                 </div>
-                <h1 className="text-medium mt-5">{item.foodName}</h1>
+                <h1 className="text-medium mt-4">{item.foodName}</h1>
                 <div className="w-full flex justify-between items-center mt-5 lg:mt-10 p-5">
                   <div>
                     <div className="flex gap-2 items-center">

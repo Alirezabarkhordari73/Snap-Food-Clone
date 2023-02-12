@@ -14,7 +14,7 @@ const Header = () => {
   const { handleModal, modalActivateState, noLink } = useStateContext();
 
   return (
-    <div className="sticky top-0 left-0 z-50">
+    <div className="sticky top-0 left-0 z-50 drop-shadow-sm">
       <div className="h-[4rem] flex items-center justify-between px-2 relative bg-white">
         <div className="w-[33.33%] flex justify-start items-center gap-5">
           <Link to="/">
