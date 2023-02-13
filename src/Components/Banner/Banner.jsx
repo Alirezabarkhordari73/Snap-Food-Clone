@@ -9,7 +9,7 @@ const Banner = () => {
       <ul className="overflow-x-auto overflow-y-hidden flex xl:justify-between items-center gap-16 h-[6.5rem] px-8">
         {bannerCategoryData.map((item) => (
           <div key={item.title} className="cursor-pointer">
-            <Link to={`/resturant/${item.id}`}>
+            <Link to={`/${item.routesName}/${item.id}`}>
               <img
                 src={item.imagePath}
                 alt="category"

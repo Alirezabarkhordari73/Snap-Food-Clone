@@ -9,6 +9,7 @@ import {
   ContactUs,
   Discount,
   Irani,
+  Cafe,
 } from "./Pages/index";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/discount-page" element={<Discount />} />
             <Route path="/irani" element={<Irani />} />
+            <Route path="/cafe/:id" element={<Cafe />} />
           </Routes>
         </BrowserRouter>
       </ContextProvider>

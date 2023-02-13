@@ -3,51 +3,61 @@ export const bannerCategoryData = [
     id: 1,
     imagePath: "/images/Category-img1.png",
     title: "پروتِین",
+    routesName: "resturant",
   },
   {
     id: 2,
     imagePath: "/images/Category-img2.png",
     title: "آبمیوه بستنی",
+    routesName: "resturant",
   },
   {
     id: 3,
     imagePath: "/images/Category-img3.png",
     title: "آجیل",
+    routesName: "resturant",
   },
   {
     id: 4,
     imagePath: "/images/Category-img4.png",
     title: "سایر",
+    routesName: "resturant",
   },
   {
     id: 5,
     imagePath: "/images/Category-img5.png",
     title: "میوه",
+    routesName: "resturant",
   },
   {
     id: 6,
     imagePath: "/images/Category-img6.png",
     title: "نانوایی",
+    routesName: "resturant",
   },
   {
     id: 7,
     imagePath: "/images/Category-img7.png",
     title: "شیرینی",
+    routesName: "resturant",
   },
   {
     id: 8,
     imagePath: "/images/Category-img8.png",
     title: "کافه",
+    routesName: "cafe",
   },
   {
     id: 9,
     imagePath: "/images/Category-img9.png",
     title: "سوپرمارکت",
+    routesName: "supermarket",
   },
   {
     id: 10,
     imagePath: "/images/Category-img10.png",
     title: "رستوران",
+    routesName: "resturant",
   },
 ];
 
@@ -1039,7 +1049,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: ["ایرانی", "رستوران"],
-    filterBtns: ["discount", "express"],
+    filterBtns: ["express"],
   },
   {
     id: 17,
@@ -1071,7 +1081,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: false,
     category: ["کافه", "رستوران"],
-    filterBtns: ["discount", "express"],
+    filterBtns: ["express"],
   },
   {
     id: 19,
@@ -1087,7 +1097,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: ["ایرانی", "رستوران"],
-    filterBtns: ["discount", "express"],
+    filterBtns: ["express"],
   },
   {
     id: 20,

@@ -1,23 +1,17 @@
-import React, {
-  useState,
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-} from "react";
+import React, { useState, useCallback, useEffect } from "react";
 
 import Layout from "../Components/Layout/Layout";
-import { SideBar, BreadCrumbs, Banner, ShowContent } from "../Components/Index";
-
+import { SideBar, Banner, BreadCrumbs, ShowContent } from "../Components/Index";
 import useShopStore from "../Utils/ShopSttore";
 import { fetchMoreData } from "../Utils/FetchMoreData";
 
-const Resturant = () => {
+const Cafe = () => {
   const [dataSource, setDataSource] = useState([]);
   const [hasMore, setHasMore] = useState(true);
 
-  const { filterData, backToDefault } = useShopStore((state) => ({
+  const { filterData, filterByCategory } = useShopStore((state) => ({
     filterData: state.filterData,
-    backToDefault: state.backToDefault,
+    filterByCategory: state.filterByCategory,
   }));
 
   //auto scroll to top
@@ -34,8 +28,8 @@ const Resturant = () => {
     [hasMore, dataSource, filterData]
   );
 
-  useLayoutEffect(() => {
-    backToDefault();
+  useEffect(() => {
+    filterByCategory("کافه");
   }, []);
 
   useEffect(() => {
@@ -49,7 +43,6 @@ const Resturant = () => {
       window.removeEventListener("scroll", ScrollHandler);
     };
   }, [ScrollHandler]);
-
   return (
     <Layout>
       <Banner />
@@ -65,4 +58,4 @@ const Resturant = () => {
   );
 };
 
-export default Resturant;
+export default Cafe;

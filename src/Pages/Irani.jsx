@@ -1,4 +1,9 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, {
+  useState,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+} from "react";
 
 import Layout from "../Components/Layout/Layout";
 import { SideBar, BreadCrumbs, Banner, ShowContent } from "../Components/Index";
@@ -10,12 +15,14 @@ const Irani = () => {
   const [dataSource, setDataSource] = useState([]);
   const [hasMore, setHasMore] = useState(true);
 
-  const { filterData, filterByCategory } = useShopStore((state) => ({
-    filterData: state.filterData,
-    filterByCategory: state.filterByCategory,
-  }));
+  const { filterData, filterByCategory, backToDefault } = useShopStore(
+    (state) => ({
+      filterData: state.filterData,
+      filterByCategory: state.filterByCategory,
+      backToDefault: state.backToDefault,
+    })
+  );
 
-  console.log("filterByCategoryData", filterData);
   //auto scroll to top
   const ScrollHandler = useCallback(
     (e) => {
@@ -29,6 +36,9 @@ const Irani = () => {
     },
     [hasMore, dataSource, filterData]
   );
+  useLayoutEffect(() => {
+    backToDefault();
+  }, []);
 
   useEffect(() => {
     filterByCategory("ایرانی");

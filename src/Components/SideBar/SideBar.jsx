@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useLocation } from "react-router-dom";
 
 import { sideBarData } from "../../data";
 import useShopStore from "../../Utils/ShopSttore";
@@ -8,8 +9,16 @@ const SideBar = () => {
     applyFilter: state.applyFilter,
   }));
 
+  const location = useLocation();
+
+  const crumbs = location.pathname
+    .split("/")
+    .filter((crumb) => crumb !== "")
+    .slice(0, 1);
+  console.log(crumbs);
+
   const handleChangeFunc = (btnname) => {
-    applyFilter(btnname);
+    applyFilter(btnname, crumbs[0]);
   };
 
   return (
