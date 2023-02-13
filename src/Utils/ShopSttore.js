@@ -3,18 +3,19 @@ import { devtools } from "zustand/middleware";
 
 import { allResturantData } from "../data";
 
+let initFilterBtns = [
+  { id: 1, checked: false, label: "discount" },
+  { id: 2, checked: false, label: "express" },
+  { id: 3, checked: false, label: "coupon" },
+];
+
 const useShopStore = create(
   devtools((set) => ({
     filterData: allResturantData,
     tempData: [],
-    filterBtns: [
-      { id: 1, checked: false, label: "discount" },
-      { id: 2, checked: false, label: "express" },
-      { id: 3, checked: false, label: "coupon" },
-    ],
+    filterBtns: initFilterBtns,
 
     applyFilter: (btnname, crumbs) => {
-      console.log("applyFilter");
       set((state) => {
         const filterBtns = state.filterBtns.map((item) =>
           item.label === btnname ? { ...item, checked: !item.checked } : item
@@ -34,27 +35,31 @@ const useShopStore = create(
             crumbs === "resturant" ? allResturantData : state.tempData;
         }
         return {
+          ...state,
           filterBtns: filterBtns,
           filterData: filterDataList,
         };
       });
     },
     filterByCategory: (categoryname) => {
-      console.log("filterByCategory");
       set((state) => {
         const iraniData = state.filterData.filter((item) =>
           item.category.includes(categoryname)
         );
         return {
+          ...state,
           filterData: iraniData,
           tempData: iraniData,
         };
       });
     },
     backToDefault: () => {
-      console.log("backToDefault");
       set((state) => {
-        return { ...state, filterData: allResturantData };
+        return {
+          ...state,
+          filterData: allResturantData,
+          filterBtns: initFilterBtns,
+        };
       });
     },
   }))

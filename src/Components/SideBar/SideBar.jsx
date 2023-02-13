@@ -15,7 +15,6 @@ const SideBar = () => {
     .split("/")
     .filter((crumb) => crumb !== "")
     .slice(0, 1);
-  console.log(crumbs);
 
   const handleChangeFunc = (btnname) => {
     applyFilter(btnname, crumbs[0]);

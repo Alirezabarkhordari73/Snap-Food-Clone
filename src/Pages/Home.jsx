@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 
 import {
   DownLoadSection,
@@ -12,8 +12,17 @@ import {
   Banner,
 } from "../Components/Index";
 import Layout from "../Components/Layout/Layout";
+import useShopStore from "../Utils/ShopSttore";
 
 const Home = () => {
+  const { backToDefault } = useShopStore((state) => ({
+    backToDefault: state.backToDefault,
+  }));
+
+  useLayoutEffect(() => {
+    backToDefault();
+  }, []);
+
   return (
     <Layout>
       <Banner />

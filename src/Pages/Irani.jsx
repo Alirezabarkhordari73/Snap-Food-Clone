@@ -36,6 +36,7 @@ const Irani = () => {
     },
     [hasMore, dataSource, filterData]
   );
+
   useLayoutEffect(() => {
     backToDefault();
   }, []);
