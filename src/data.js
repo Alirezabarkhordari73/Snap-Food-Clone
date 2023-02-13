@@ -1323,6 +1323,38 @@ export const allResturantData = [
     category: ["شیرینی"],
     filterBtns: ["express"],
   },
+  {
+    id: 34,
+    resturantName: "شیرینی سهروردی",
+    resturantImage: "/images/AllData/R11.jpg",
+    foodImage: "/images/AllData/RF11.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "شیرینی ,نان , کیک",
+    deliveryPrice: 14000,
+    rating: {
+      ratingValue: 4,
+      usersVotesCount: 270,
+    },
+    freeDeliverByOrder: false,
+    category: ["شیرینی"],
+    filterBtns: ["express"],
+  },
+  {
+    id: 35,
+    resturantName: "شیرینی تینا",
+    resturantImage: "/images/AllData/R12.jpg",
+    foodImage: "/images/AllData/RF12.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "شیرینی ,نان , کیک",
+    deliveryPrice: 10000,
+    rating: {
+      ratingValue: 4,
+      usersVotesCount: 70,
+    },
+    freeDeliverByOrder: true,
+    category: ["شیرینی"],
+    filterBtns: ["express"],
+  },
 ];
 
 export const sideBarData = [
