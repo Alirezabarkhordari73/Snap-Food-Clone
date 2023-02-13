@@ -15,6 +15,7 @@ import {
   Fruits,
   IceCreams,
   Meats,
+  Nuts,
 } from "./Pages/index";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Route path="/fruits/:id" element={<Fruits />} />
             <Route path="/icecreams/:id" element={<IceCreams />} />
             <Route path="/meats/:id" element={<Meats />} />
+            <Route path="/nuts/:id" element={<Nuts />} />
           </Routes>
         </BrowserRouter>
       </ContextProvider>

@@ -10,3 +10,4 @@ export { default as Breads } from "./Breads";
 export { default as Fruits } from "./Fruits";
 export { default as IceCreams } from "./IceCreams";
 export { default as Meats } from "./Meats";
+export { default as Nuts } from "./Nuts";
