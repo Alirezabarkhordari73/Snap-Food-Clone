@@ -11,6 +11,7 @@ import {
   Irani,
   Cafe,
   Cookies,
+  Breads,
 } from "./Pages/index";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/irani" element={<Irani />} />
             <Route path="/cafe/:id" element={<Cafe />} />
             <Route path="/cookies/:id" element={<Cookies />} />
+            <Route path="/breads/:id" element={<Breads />} />
           </Routes>
         </BrowserRouter>
       </ContextProvider>

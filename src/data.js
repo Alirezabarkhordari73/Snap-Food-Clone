@@ -33,7 +33,7 @@ export const bannerCategoryData = [
     id: 6,
     imagePath: "/images/Category-img6.png",
     title: "نانوایی",
-    routesName: "resturant",
+    routesName: "breads",
   },
   {
     id: 7,
@@ -1304,7 +1304,7 @@ export const allResturantData = [
       usersVotesCount: 200,
     },
     freeDeliverByOrder: true,
-    category: ["شیرینی"],
+    category: ["شیرینی", "نانوایی"],
     filterBtns: ["discount", "express"],
   },
   {
@@ -1320,7 +1320,7 @@ export const allResturantData = [
       usersVotesCount: 270,
     },
     freeDeliverByOrder: false,
-    category: ["شیرینی"],
+    category: ["شیرینی", "نانوایی"],
     filterBtns: ["express"],
   },
   {
@@ -1336,7 +1336,7 @@ export const allResturantData = [
       usersVotesCount: 270,
     },
     freeDeliverByOrder: false,
-    category: ["شیرینی"],
+    category: ["شیرینی", "نانوایی"],
     filterBtns: ["express"],
   },
   {
@@ -1353,6 +1353,22 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: ["شیرینی"],
+    filterBtns: ["express"],
+  },
+  {
+    id: 35,
+    resturantName: "نان سحر",
+    resturantImage: "/images/AllData/R13.jpg",
+    foodImage: "/images/AllData/RF13.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "شیرینی ,نان , کیک",
+    deliveryPrice: 16000,
+    rating: {
+      ratingValue: 4,
+      usersVotesCount: 370,
+    },
+    freeDeliverByOrder: true,
+    category: ["شیرینی", "نانوایی"],
     filterBtns: ["express"],
   },
 ];
