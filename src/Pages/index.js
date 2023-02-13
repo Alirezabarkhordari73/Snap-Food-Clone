@@ -7,3 +7,6 @@ export { default as Irani } from "./Irani";
 export { default as Cafe } from "./Cafe";
 export { default as Cookies } from "./Cookies";
 export { default as Breads } from "./Breads";
+export { default as Fruits } from "./Fruits";
+export { default as IceCreams } from "./IceCreams";
+export { default as Meats } from "./Meats";

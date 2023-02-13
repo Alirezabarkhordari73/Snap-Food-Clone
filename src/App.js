@@ -12,6 +12,9 @@ import {
   Cafe,
   Cookies,
   Breads,
+  Fruits,
+  IceCreams,
+  Meats,
 } from "./Pages/index";
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
             <Route path="/cafe/:id" element={<Cafe />} />
             <Route path="/cookies/:id" element={<Cookies />} />
             <Route path="/breads/:id" element={<Breads />} />
+            <Route path="/fruits/:id" element={<Fruits />} />
+            <Route path="/icecreams/:id" element={<IceCreams />} />
+            <Route path="/meats/:id" element={<Meats />} />
           </Routes>
         </BrowserRouter>
       </ContextProvider>
