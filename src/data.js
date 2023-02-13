@@ -39,7 +39,7 @@ export const bannerCategoryData = [
     id: 7,
     imagePath: "/images/Category-img7.png",
     title: "شیرینی",
-    routesName: "resturant",
+    routesName: "cookies",
   },
   {
     id: 8,
@@ -1177,7 +1177,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: false,
     category: ["کافه", "رستوران"],
-    filterBtns: ["discount", "express"],
+    filterBtns: ["express"],
   },
   {
     id: 25,
@@ -1257,7 +1257,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: ["ایرانی", "رستوران"],
-    filterBtns: ["discount", "express"],
+    filterBtns: ["express"],
   },
   {
     id: 30,
@@ -1273,7 +1273,7 @@ export const allResturantData = [
     },
     freeDeliverByOrder: true,
     category: ["ایرانی", "رستوران"],
-    filterBtns: ["discount", "express"],
+    filterBtns: ["express"],
   },
   {
     id: 31,
@@ -1290,6 +1290,38 @@ export const allResturantData = [
     freeDeliverByOrder: true,
     category: ["ایرانی", "رستوران"],
     filterBtns: ["discount", "express"],
+  },
+  {
+    id: 32,
+    resturantName: "نان و شیرینی جم",
+    resturantImage: "/images/AllData/R9.jpeg",
+    foodImage: "/images/AllData/RF9.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "شیرینی ,نان , کیک",
+    deliveryPrice: 24000,
+    rating: {
+      ratingValue: 4.8,
+      usersVotesCount: 200,
+    },
+    freeDeliverByOrder: true,
+    category: ["شیرینی"],
+    filterBtns: ["discount", "express"],
+  },
+  {
+    id: 33,
+    resturantName: "قنادی توکلی فر تبریزی",
+    resturantImage: "/images/AllData/R10.jpg",
+    foodImage: "/images/AllData/RF10.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "شیرینی ,نان , کیک",
+    deliveryPrice: 14000,
+    rating: {
+      ratingValue: 3.8,
+      usersVotesCount: 270,
+    },
+    freeDeliverByOrder: false,
+    category: ["شیرینی"],
+    filterBtns: ["express"],
   },
 ];
 

@@ -10,7 +10,7 @@ import { SideBar, Banner, BreadCrumbs, ShowContent } from "../Components/Index";
 import useShopStore from "../Utils/ShopSttore";
 import { fetchMoreData } from "../Utils/FetchMoreData";
 
-const Cafe = () => {
+const Cookies = () => {
   const [dataSource, setDataSource] = useState([]);
   const [hasMore, setHasMore] = useState(true);
 
@@ -41,7 +41,7 @@ const Cafe = () => {
   }, []);
 
   useEffect(() => {
-    filterByCategory("کافه");
+    filterByCategory("شیرینی");
   }, []);
 
   useEffect(() => {
@@ -70,4 +70,4 @@ const Cafe = () => {
   );
 };
 
-export default Cafe;
+export default Cookies;

@@ -5,3 +5,4 @@ export { default as ContactUs } from "./ContactUs";
 export { default as Discount } from "./Discount";
 export { default as Irani } from "./Irani";
 export { default as Cafe } from "./Cafe";
+export { default as Cookies } from "./Cookies";
