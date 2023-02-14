@@ -22,7 +22,7 @@ const BreadCrumbs = () => {
     });
 
   return (
-    <div className="flex bg-transparent justify-start items-center text-[#969696] mt-4 px-2 text-small">
+    <div className="flex bg-transparent h-[30px] p-6 justify-start items-center text-[#969696] text-small">
       <Link to="/">اسنپ فود</Link>
       {crumbs}
     </div>

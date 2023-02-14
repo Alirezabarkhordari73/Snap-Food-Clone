@@ -20,3 +20,4 @@ export { default as BreadCrumbs } from "./BreadCrumbs/BreadCrumbs";
 export { default as ShowContent } from "./ShowContent/ShowContent";
 export { default as ProductSideBar } from "./SideBar/ProductSideBar";
 export { default as ShowProducts } from "./ShowProducts/ShowProducts";
+export { default as ProductLeftSideBar } from "./SideBar/ProductLeftSideBar";

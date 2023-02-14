@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import Layout from "../Components/Layout/Layout";
-import { ProductSideBar, BreadCrumbs, ShowProducts } from "../Components/Index";
+import {
+  ProductSideBar,
+  BreadCrumbs,
+  ShowProducts,
+  ProductLeftSideBar,
+} from "../Components/Index";
 import useShopStore from "../Utils/ShopSttore";
 
 const Products = () => {
@@ -32,13 +37,13 @@ const Products = () => {
   console.log("newExperience", newExperience);
   return (
     <Layout>
-      <BreadCrumbs />
-      <main className="w-full relative bg-slate-100">
+      <main className="w-full relative bg-[#f5f5f5]">
+        <BreadCrumbs />
         <div className="w-full h-[70px]"></div>
         <div className="flex items-start justify-between">
-          <ProductSideBar />
+          <ProductSideBar dataSource={newExperience} />
           <ShowProducts dataSource={newExperience} />
-          <div className="w-1/4 h-screen"></div>
+          <ProductLeftSideBar />
         </div>
       </main>
     </Layout>

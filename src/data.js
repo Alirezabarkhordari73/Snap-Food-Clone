@@ -463,6 +463,7 @@ export const newExperienceResturantData = [
     deliveryType: "ارسال اکسپرس",
     shortDescription: "ایرانی , سنتی",
     deliveryPrice: 18000,
+    discount: 40,
     rating: {
       ratingValue: 4.5,
       usersVotesCount: 231,
@@ -472,9 +473,11 @@ export const newExperienceResturantData = [
     coupons: [
       "ارسال رایگان با سفارش حداقل 300 هزار تومن",
       "5 درصد تخفیف مخصوص سفارش اول",
+      "10 درصد تخفیف مخصوص سفارش دوم",
     ],
     products: [
       {
+        id: 1,
         title: "سنگک سنتی دو رو پر کنجد بزرگ",
         ingredients: "نان سنگک سبوس دار",
         inStock: 20,
@@ -482,6 +485,7 @@ export const newExperienceResturantData = [
         price: 50000,
       },
       {
+        id: 2,
         title: "گاتا مغز دار گردو و خرما",
         ingredients: "تشکیل شده از: مغزی مخصوص با گردو",
         inStock: 10,
@@ -489,6 +493,7 @@ export const newExperienceResturantData = [
         price: 23000,
       },
       {
+        id: 3,
         title: "گاتا کره ای",
         ingredients: "تشکیل شده از: مغزی مخصوص",
         inStock: 30,
@@ -496,6 +501,7 @@ export const newExperienceResturantData = [
         price: 30000,
       },
       {
+        id: 4,
         title: "نان کارامل شکلات",
         ingredients: "تشکیل شده از: کارامل و شکلات",
         inStock: 10,
@@ -503,6 +509,7 @@ export const newExperienceResturantData = [
         price: 40000,
       },
       {
+        id: 5,
         title: "نان  شیرمال گرد",
         ingredients: "تشکیل شده از: کارامل و شکلات",
         inStock: 10,
@@ -520,6 +527,7 @@ export const newExperienceResturantData = [
     deliveryType: "ارسال اکسپرس",
     shortDescription: "ایرانی , سنتی",
     deliveryPrice: 6000,
+    discount: 40,
     rating: {
       ratingValue: 4,
       usersVotesCount: 161,
@@ -571,16 +579,34 @@ export const newExperienceResturantData = [
         ingredients:
           "(مناسب برای ۳-۴ نفر)، یک عدد زبان، یک عدد مغز، دو عدد بناگوش، یک پرس گوشت لخم، یک جفت چشم، ۴ عدد پاچه، آب گوشت، به همراه نان سنگک و نارنج",
         inStock: 10,
-        image: "/images/NewExper/F1.jpeg",
+        image: "/images/NewExper/F3.jpeg",
         price: 180000,
       },
       {
-        id: 5,
+        id: 6,
         title: "آب گوشت",
         ingredients:
           "(مناسب برای ۳-۴ نفر)، یک عدد زبان، یک عدد مغز، دو عدد بناگوش، یک پرس گوشت لخم، یک جفت چشم، ۴ عدد پاچه، آب گوشت، به همراه نان سنگک و نارنج",
         inStock: 10,
         image: "/images/NewExper/F4.jpeg",
+        price: 280000,
+      },
+      {
+        id: 7,
+        title: "کل پاچه یک دست کامل",
+        ingredients:
+          "(مناسب برای ۳-۴ نفر)، یک عدد زبان، یک عدد مغز، دو عدد بناگوش، یک پرس گوشت لخم، یک جفت چشم، ۴ عدد پاچه، آب گوشت، به همراه نان سنگک و نارنج",
+        inStock: 10,
+        image: "/images/NewExper/F3.jpeg",
+        price: 180000,
+      },
+      {
+        id: 8,
+        title: "آب گوشت",
+        ingredients:
+          "(مناسب برای ۳-۴ نفر)، یک عدد زبان، یک عدد مغز، دو عدد بناگوش، یک پرس گوشت لخم، یک جفت چشم، ۴ عدد پاچه، آب گوشت، به همراه نان سنگک و نارنج",
+        inStock: 10,
+        image: "/images/NewExper/F7.jpeg",
         price: 280000,
       },
     ],
@@ -589,26 +615,31 @@ export const newExperienceResturantData = [
         id: 1,
         title: "لیموناد شیشه ای",
         image: "/images/Drinks/D2.jpg",
+        price: 18000,
       },
       {
         id: 2,
         title: "نوشابه شیشه ای",
         image: "/images/Drinks/D1.jpg",
+        price: 18000,
       },
       {
         id: 3,
         title: "نوشابه قوطی کوکاکولا",
         image: "/images/Drinks/D3.jpg",
+        price: 18000,
       },
       {
         id: 4,
         title: "نوشابه قوطی پرتغالی",
         image: "/images/Drinks/D4.jpg",
+        price: 18000,
       },
       {
         id: 5,
         title: "نوشابه قوطی سون آپ",
         image: "/images/Drinks/D5.jpg",
+        price: 18000,
       },
     ],
   },
@@ -620,6 +651,7 @@ export const newExperienceResturantData = [
     deliveryType: "ارسال اکسپرس",
     shortDescription: "صبحانه,میان وعده,نوشیدنی گرم",
     deliveryPrice: 8000,
+    discount: 40,
     rating: {
       ratingValue: 4.5,
       usersVotesCount: 76,
@@ -627,6 +659,7 @@ export const newExperienceResturantData = [
     coupons: [
       "ارسال رایگان با سفارش حداقل 300 هزار تومن",
       "5 درصد تخفیف مخصوص سفارش اول",
+      "10 درصد تخفیف مخصوص سفارش دوم",
     ],
     freeDeliverByOrder: false,
     routName: "newexperiences",
@@ -712,7 +745,7 @@ export const newExperienceResturantData = [
         price: 100000,
       },
       {
-        id: 10,
+        id: 11,
         title: "چای",
         ingredients: "۳۶۰ میلی لیتر، اسپرسو دبل، آب ۹۱ درجه",
         inStock: 20,
@@ -748,21 +781,122 @@ export const newExperienceResturantData = [
       },
     ],
   },
-  // {
-  //   id: 4,
-  //   resturantName: "کافه رستوران گفتارخانه",
-  //   resturantImage: "/images/NewExper/R4.jpg",
-  //   foodImage: "/images/NewExper/RF4.jpg",
-  //   deliveryType: "ارسال اکسپرس",
-  //   shortDescription: "ایرانی , سنتی",
-  //   deliveryPrice: 16000,
-  //   rating: {
-  //     ratingValue: 4.2,
-  //     usersVotesCount: 168,
-  //   },
-  //   freeDeliverByOrder: true,
-  //   routName: "",
-  // },
+  {
+    id: 4,
+    resturantName: "کافه رستوران گفتارخانه",
+    resturantImage: "/images/NewExper/R4.jpg",
+    foodImage: "/images/NewExper/RF4.jpg",
+    deliveryType: "ارسال اکسپرس",
+    shortDescription: "ایرانی , سنتی",
+    deliveryPrice: 16000,
+    discount: 45,
+    rating: {
+      ratingValue: 4.2,
+      usersVotesCount: 168,
+    },
+    freeDeliverByOrder: true,
+    routName: "newexperiences",
+    coupons: [
+      "ارسال رایگان با سفارش حداقل 300 هزار تومن",
+      "5 درصد تخفیف مخصوص سفارش اول",
+    ],
+    products: [
+      {
+        id: 1,
+        title: "چلو جوجه کباب مخصوص",
+        ingredients:
+          "جوجه کباب زعفرانی سینه مرغ ۲۵۰ گرمی، ۳۵۰ گرم برنج ایرانی، دورچین: یک عدد گوجه کبابی",
+        inStock: 40,
+        image: "/images/CRest/F2.jpeg",
+        price: 120000,
+      },
+      {
+        id: 2,
+        title: "سالاد سزار با مرغ",
+        ingredients:
+          "۳۰۰ گرم فیله مرغ سوخاری، کاهو، گوجه گیلاسی، زیتون، ذرت، سس سزار، نان تست",
+        inStock: 20,
+        image: "/images/CRest/F1.jpeg",
+        price: 160000,
+      },
+      {
+        id: 3,
+        title: "چیکن استیت",
+        ingredients:
+          "۲۰۰ گرم استیک سینه مرغ، سس قارچ، دورچین: کدو، هویج، کلم بروکلی، ذرت، زیتون",
+        inStock: 50,
+        image: "/images/CRest/F5.jpeg",
+        price: 100000,
+      },
+      {
+        id: 4,
+        title: "چلو کباب لقمه",
+        ingredients:
+          "یک سیخ کباب لقمه گوشت گوسفندی ۲۵۰ گرمی، ۳۵۰ گرم برنج ایرانی، دورچین: یک عدد گوجه کبابی",
+        inStock: 50,
+        image: "/images/CRest/F3.jpeg",
+        price: 120000,
+      },
+      {
+        id: 5,
+        title: "زرشک پلو با مرع سرخ کرده مخصوص",
+        ingredients: "۳۵۰ گرم مرغ سرخ شده، ۳۵۰ گرم زرشک پلو با برنج ایرانی",
+        inStock: 20,
+        image: "/images/CRest/F7.jpeg",
+        price: 170000,
+      },
+      {
+        id: 6,
+        title: "سالاد سزار با مرغ گریل شده",
+        ingredients:
+          "۲۰۰ گرم فیله مرغ گریل شده، کاهو، گوجه گیلاسی، زیتون، ذرت، سس سزار، نان تست",
+        inStock: 30,
+        image: "/images/CRest/F6.jpeg",
+        price: 120000,
+      },
+      {
+        id: 7,
+        title: "برگر ویژه ",
+        ingredients:
+          "یک عدد برگر دست ساز گوشت گوسفندی ۲۰۰ گرمی، یک ورق بیکن گوشت ۹۰%، کاهو، گوجه، خیارشور، سس قارچ، نان گرد",
+        inStock: 20,
+        image: "/images/CRest/F4.jpeg",
+        price: 90000,
+      },
+    ],
+    drinks: [
+      {
+        id: 1,
+        title: "لیموناد شیشه ای",
+        image: "/images/Drinks/D2.jpg",
+      },
+      {
+        id: 2,
+        title: "نوشابه شیشه ای",
+        image: "/images/Drinks/D1.jpg",
+      },
+      {
+        id: 3,
+        title: "نوشابه قوطی کوکاکولا",
+        image: "/images/Drinks/D3.jpg",
+      },
+      {
+        id: 4,
+        title: "نوشابه قوطی پرتغالی",
+        image: "/images/Drinks/D4.jpg",
+      },
+      {
+        id: 5,
+        title: "نوشابه قوطی سون آپ",
+        image: "/images/Drinks/D5.jpg",
+      },
+      {
+        id: 7,
+        title: "ماءالشعیر قوطی هی دی",
+        image: "/images/Drinks/D6.jpg",
+      },
+    ],
+  },
   // {
   //   id: 5,
   //   resturantName: "قنادی هلر",
@@ -771,6 +905,7 @@ export const newExperienceResturantData = [
   //   deliveryType: "ارسال اکسپرس",
   //   shortDescription: "ایرانی , سنتی",
   //   deliveryPrice: 6000,
+  // discount : 40,
   //   rating: {
   //     ratingValue: 4.2,
   //     usersVotesCount: 128,
