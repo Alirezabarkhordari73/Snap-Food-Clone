@@ -4,7 +4,7 @@ import { Header, Footer } from "../Index";
 
 const Layout = ({ children }) => {
   return (
-    <div className="relative">
+    <div className="relative fade-in">
       <Header />
       <div className="min-h-screen z-10">{children}</div>
       <Footer />

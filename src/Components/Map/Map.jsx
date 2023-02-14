@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import useGeoLocation from "../../Hooks/useGeoLocation";
 
 const Map = () => {
-  const [latitude, setLatitude] = useState(35.715298);
-  const [longitude, setLongitude] = useState(51.404343);
+  const { location } = useGeoLocation();
+
   // function LocationMarker() {
   //   const [position, setPosition] = useState(null);
   //   const [bbox, setBbox] = useState([]);
@@ -41,8 +42,8 @@ const Map = () => {
     navigator.geolocation.getCurrentPosition(function (position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
-      setLatitude(position.coords.latitude);
-      setLongitude(position.coords.longitude);
+      // setLatitude(position.coords.latitude);
+      // setLongitude(position.coords.longitude);
     });
   }, []);
 

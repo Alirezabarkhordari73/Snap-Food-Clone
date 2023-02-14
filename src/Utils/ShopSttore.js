@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
-import { allResturantData } from "../data";
+import { allResturantData, newExperienceResturantData } from "../data";
 
 let initFilterBtns = [
   { id: 1, checked: false, label: "discount" },
@@ -14,6 +14,7 @@ const useShopStore = create(
     filterData: allResturantData,
     tempData: [],
     filterBtns: initFilterBtns,
+    newExperience: newExperienceResturantData,
 
     applyFilter: (btnname, crumbs) => {
       set((state) => {
@@ -59,7 +60,25 @@ const useShopStore = create(
           ...state,
           filterData: allResturantData,
           filterBtns: initFilterBtns,
+          newExperience: newExperienceResturantData,
         };
+      });
+    },
+    getProducts: (categoryname, id) => {
+      set((state) => {
+        if (categoryname === "newexperiences") {
+          const data = state.newExperience.filter((item) => item.id === id);
+          // console.log(data);
+          return {
+            ...state,
+            newExperience: data,
+          };
+        } else {
+          return {
+            ...state,
+            newExperience: [],
+          };
+        }
       });
     },
   }))

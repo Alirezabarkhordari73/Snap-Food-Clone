@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { BsFillPinAngleFill, BsFillStarFill } from "react-icons/bs";
 import { RiEBike2Fill } from "react-icons/ri";
@@ -33,7 +34,10 @@ const SliderComponents = ({ Data }) => {
       >
         {Data.map((item) => (
           <SwiperSlide key={item.resturantName} className="py-6">
-            <div className="bg-white relative w-[50%px] h-[400px] rounded-medium flex flex-col items-center justify-start cursor-pointer Card-Shadow2 hover:Card-Shadow3">
+            <Link
+              to={`/${item.routName}/${item.id}`}
+              className="bg-white relative w-[50%px] h-[400px] rounded-medium flex flex-col items-center justify-start cursor-pointer Card-Shadow2 hover:Card-Shadow3"
+            >
               <div className="w-full h-[40%] rounded-t-medium overflow-hidden">
                 <LazyLoadImage
                   effect="blur"
@@ -75,7 +79,7 @@ const SliderComponents = ({ Data }) => {
                 </div>
                 <p>{item.deliveryPrice} تومان</p>
               </div>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
