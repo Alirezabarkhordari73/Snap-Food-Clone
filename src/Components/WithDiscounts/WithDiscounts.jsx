@@ -3,9 +3,10 @@ import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 
 import { SliderComponents } from "../Index";
-import { withDiscountData } from "../../data";
+import { allResturantData } from "../../data";
 
 const WithDiscounts = () => {
+  let data = allResturantData.filter((item) => item.isDiscount === true);
   return (
     <section className="mt-[2rem]">
       <div className="w-full flex justify-between items-center">
@@ -20,7 +21,7 @@ const WithDiscounts = () => {
           </span>
         </a>
       </div>
-      <SliderComponents Data={withDiscountData} />
+      <SliderComponents Data={data} />
     </section>
   );
 };

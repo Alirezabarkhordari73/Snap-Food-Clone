@@ -89,7 +89,7 @@ export const foodCategoryData = [
   {
     categoryId: 2,
     name: "فست فود",
-    routName: "fast-food",
+    routName: "fastfood",
     categoryImage: "/images/Cimage/R2.jpg",
     rsturantData: [
       {
@@ -1595,8 +1595,8 @@ export const allResturantData = [
   {
     id: 4,
     resturantName: "باروژ (مطهری)",
-    resturantImage: "/images/WCoupon/RF33.png",
-    foodImage: "/images/WCoupon/R33.jpg",
+    resturantImage: "/images/AllData/RF33.png",
+    foodImage: "/images/AllData/R33.jpg",
     deliveryType: "پیک فروشنده",
     shortDescription: "فست فود ,برگر ,مرغ سوخاری",
     deliveryPrice: 10000,
@@ -1613,6 +1613,10 @@ export const allResturantData = [
     isDiscount: true,
     isJustInSnapp: false,
     routName: "withdiscount",
+    coupons: [
+      "ارسال رایگان با سفارش حداقل 300 هزار تومن",
+      "5 درصد تخفیف مخصوص سفارش اول",
+    ],
     products: [
       {
         id: 1,
@@ -1889,6 +1893,10 @@ export const allResturantData = [
     isDiscount: true,
     isJustInSnapp: false,
     routName: "withdiscount",
+    coupons: [
+      "ارسال رایگان با سفارش حداقل 300 هزار تومن",
+      "5 درصد تخفیف مخصوص سفارش اول",
+    ],
     products: [
       {
         id: 1,
@@ -2489,6 +2497,10 @@ export const allResturantData = [
     isDiscount: true,
     isJustInSnapp: false,
     routName: "withdiscount",
+    coupons: [
+      "ارسال رایگان با سفارش حداقل 300 هزار تومن",
+      "5 درصد تخفیف مخصوص سفارش اول",
+    ],
     products: [
       {
         id: 1,
@@ -3319,9 +3331,9 @@ export const allResturantData = [
     isTopRate: false,
     isNewExperience: false,
     isCoupons: false,
-    isDiscount: false,
+    isDiscount: true,
     isJustInSnapp: false,
-    routName: "",
+    routName: "withdiscount",
     coupons: [
       "ارسال رایگان با سفارش حداقل 300 هزار تومن",
       "5 درصد تخفیف مخصوص سفارش اول",
@@ -3600,7 +3612,7 @@ export const allResturantData = [
     isTopRate: true,
     isNewExperience: false,
     isCoupons: false,
-    isDiscount: true,
+    isDiscount: false,
     isJustInSnapp: false,
     routName: "toprated",
     coupons: [
@@ -5633,7 +5645,7 @@ export const allResturantData = [
       usersVotesCount: 220,
     },
     freeDeliverByOrder: true,
-    category: ["کافه", "رستوران"],
+    category: ["کافه", "رستوران", "فست فود"],
     filterBtns: ["discount", "express"],
     isTopRate: true,
     isNewExperience: false,

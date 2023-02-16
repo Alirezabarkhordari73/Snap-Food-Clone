@@ -17,6 +17,7 @@ import {
   Meats,
   Nuts,
   Products,
+  FastFood,
 } from "./Pages/index";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/discount-page" element={<Discount />} />
             <Route path="/irani" element={<Irani />} />
+            <Route path="/fastfood" element={<FastFood />} />
             <Route path="/cafe/:id" element={<Cafe />} />
             <Route path="/cookies/:id" element={<Cookies />} />
             <Route path="/breads/:id" element={<Breads />} />
@@ -40,6 +42,7 @@ function App() {
             <Route path="/nuts/:id" element={<Nuts />} />
             <Route path="/newexperiences/:id" element={<Products />} />
             <Route path="/toprated/:id" element={<Products />} />
+            <Route path="/withdiscount/:id" element={<Products />} />
           </Routes>
         </BrowserRouter>
       </ContextProvider>

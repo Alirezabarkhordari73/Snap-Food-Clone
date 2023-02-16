@@ -12,3 +12,4 @@ export { default as IceCreams } from "./IceCreams";
 export { default as Meats } from "./Meats";
 export { default as Nuts } from "./Nuts";
 export { default as Products } from "./Products";
+export { default as FastFood } from "./FastFood";

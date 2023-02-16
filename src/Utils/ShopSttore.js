@@ -66,7 +66,11 @@ const useShopStore = create(
     },
     getProducts: (categoryname, id) => {
       set((state) => {
-        if (categoryname === "newexperiences" || categoryname === "toprated") {
+        if (
+          categoryname === "newexperiences" ||
+          categoryname === "toprated" ||
+          categoryname === "withdiscount"
+        ) {
           const data = allResturantData.filter((item) => item.id === id);
           console.log(data);
           return {
