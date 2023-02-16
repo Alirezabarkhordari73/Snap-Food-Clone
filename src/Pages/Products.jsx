@@ -26,6 +26,9 @@ const Products = () => {
   urlCategoryName = crumbs.splice(0, 1);
   urlId = crumbs.splice(0, 2);
 
+  console.log(urlId);
+  console.log(urlCategoryName);
+
   useEffect(() => {
     getProducts(urlCategoryName[0], parseInt(urlId[0]));
   }, []);

@@ -15,10 +15,13 @@ const Resturant = () => {
   const [dataSource, setDataSource] = useState([]);
   const [hasMore, setHasMore] = useState(true);
 
-  const { filterData, backToDefault } = useShopStore((state) => ({
-    filterData: state.filterData,
-    backToDefault: state.backToDefault,
-  }));
+  const { filterData, backToDefault, filterByCategory } = useShopStore(
+    (state) => ({
+      filterData: state.filterData,
+      backToDefault: state.backToDefault,
+      filterByCategory: state.filterByCategory,
+    })
+  );
 
   //auto scroll to top
   const ScrollHandler = useCallback(
@@ -36,6 +39,10 @@ const Resturant = () => {
 
   useLayoutEffect(() => {
     backToDefault();
+  }, []);
+
+  useEffect(() => {
+    filterByCategory("رستوران");
   }, []);
 
   useEffect(() => {

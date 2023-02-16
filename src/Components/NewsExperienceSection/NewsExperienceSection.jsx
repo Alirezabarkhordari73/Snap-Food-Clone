@@ -3,9 +3,11 @@ import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 
 import { SliderComponents } from "../Index";
-import { newExperienceResturantData } from "../../data";
+import { allResturantData } from "../../data";
 
 const NewsExperienceSection = () => {
+  let data = allResturantData.filter((item) => item.isNewExperience === true);
+
   return (
     <section className="mt-[9rem]">
       <div className="w-full flex justify-between items-center">
@@ -20,7 +22,7 @@ const NewsExperienceSection = () => {
           </span>
         </a>
       </div>
-      <SliderComponents Data={newExperienceResturantData} />
+      <SliderComponents Data={data} />
     </section>
   );
 };

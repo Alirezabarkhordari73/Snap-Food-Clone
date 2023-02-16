@@ -39,6 +39,7 @@ function App() {
             <Route path="/meats/:id" element={<Meats />} />
             <Route path="/nuts/:id" element={<Nuts />} />
             <Route path="/newexperiences/:id" element={<Products />} />
+            <Route path="/toprated/:id" element={<Products />} />
           </Routes>
         </BrowserRouter>
       </ContextProvider>

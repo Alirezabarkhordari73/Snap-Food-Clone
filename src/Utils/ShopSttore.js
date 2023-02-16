@@ -14,7 +14,7 @@ const useShopStore = create(
     filterData: allResturantData,
     tempData: [],
     filterBtns: initFilterBtns,
-    newExperience: newExperienceResturantData,
+    newExperience: [],
 
     applyFilter: (btnname, crumbs) => {
       set((state) => {
@@ -44,13 +44,13 @@ const useShopStore = create(
     },
     filterByCategory: (categoryname) => {
       set((state) => {
-        const iraniData = state.filterData.filter((item) =>
+        const cdata = state.filterData.filter((item) =>
           item.category.includes(categoryname)
         );
         return {
           ...state,
-          filterData: iraniData,
-          tempData: iraniData,
+          filterData: cdata,
+          tempData: cdata,
         };
       });
     },
@@ -66,9 +66,9 @@ const useShopStore = create(
     },
     getProducts: (categoryname, id) => {
       set((state) => {
-        if (categoryname === "newexperiences") {
-          const data = state.newExperience.filter((item) => item.id === id);
-          // console.log(data);
+        if (categoryname === "newexperiences" || categoryname === "toprated") {
+          const data = allResturantData.filter((item) => item.id === id);
+          console.log(data);
           return {
             ...state,
             newExperience: data,

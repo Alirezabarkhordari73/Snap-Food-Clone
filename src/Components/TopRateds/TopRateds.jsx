@@ -3,9 +3,11 @@ import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 
 import { SliderComponents } from "../Index";
-import { topRatedData } from "../../data";
+import { allResturantData } from "../../data";
 
 const TopRateds = () => {
+  let data = allResturantData.filter((item) => item.isTopRate === true);
+
   return (
     <section className="mt-[2rem]">
       <div className="w-full flex justify-between items-center">
@@ -20,7 +22,7 @@ const TopRateds = () => {
           </span>
         </a>
       </div>
-      <SliderComponents Data={topRatedData} />
+      <SliderComponents Data={data} />
     </section>
   );
 };
