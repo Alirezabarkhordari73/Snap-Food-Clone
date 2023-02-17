@@ -15,3 +15,4 @@ export { default as Products } from "./Products";
 export { default as FastFood } from "./FastFood";
 export { default as Kebab } from "./Kebab";
 export { default as Pitza } from "./Pitza";
+export { default as Berger } from "./Berger";

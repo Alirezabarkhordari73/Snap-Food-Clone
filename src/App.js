@@ -20,6 +20,7 @@ import {
   FastFood,
   Kebab,
   Pitza,
+  Berger,
 } from "./Pages/index";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
             <Route path="/fastfood" element={<FastFood />} />
             <Route path="/kabab" element={<Kebab />} />
             <Route path="/pitza" element={<Pitza />} />
+            <Route path="/berger" element={<Berger />} />
             <Route path="/cafe/:id" element={<Cafe />} />
             <Route path="/cookies/:id" element={<Cookies />} />
             <Route path="/breads/:id" element={<Breads />} />
