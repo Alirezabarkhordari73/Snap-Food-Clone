@@ -18,6 +18,8 @@ import {
   Nuts,
   Products,
   FastFood,
+  Kebab,
+  Pitza,
 } from "./Pages/index";
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
             <Route path="/discount-page" element={<Discount />} />
             <Route path="/irani" element={<Irani />} />
             <Route path="/fastfood" element={<FastFood />} />
+            <Route path="/kabab" element={<Kebab />} />
+            <Route path="/pitza" element={<Pitza />} />
             <Route path="/cafe/:id" element={<Cafe />} />
             <Route path="/cookies/:id" element={<Cookies />} />
             <Route path="/breads/:id" element={<Breads />} />
