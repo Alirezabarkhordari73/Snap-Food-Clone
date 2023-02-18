@@ -21,6 +21,9 @@ import {
   Kebab,
   Pitza,
   Berger,
+  Sandwich,
+  Fried,
+  SignUpOwners,
 } from "./Pages/index";
 
 function App() {
@@ -39,6 +42,8 @@ function App() {
             <Route path="/kabab" element={<Kebab />} />
             <Route path="/pitza" element={<Pitza />} />
             <Route path="/berger" element={<Berger />} />
+            <Route path="/sandwich" element={<Sandwich />} />
+            <Route path="/fried" element={<Fried />} />
             <Route path="/cafe/:id" element={<Cafe />} />
             <Route path="/cookies/:id" element={<Cookies />} />
             <Route path="/breads/:id" element={<Breads />} />
@@ -49,6 +54,7 @@ function App() {
             <Route path="/newexperiences/:id" element={<Products />} />
             <Route path="/toprated/:id" element={<Products />} />
             <Route path="/withdiscount/:id" element={<Products />} />
+            <Route path="/SignUp-Owners" element={<SignUpOwners />} />
           </Routes>
         </BrowserRouter>
       </ContextProvider>

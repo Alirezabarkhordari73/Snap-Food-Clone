@@ -68,7 +68,9 @@ const Header = () => {
         <div className="hidden w-[33.33%] justify-end items-center lg:flex gap-3 text-xl ml-3">
           <div className="flex justify-center items-center gap-2">
             <BsShopWindow className="text-medium" />
-            <p className="text-small">ثبت نام فروشندگان</p>
+            <Link to="/SignUp-Owners" className="text-small">
+              ثبت نام فروشندگان
+            </Link>
           </div>
           <button
             onClick={() => handleModal("signModal")}
