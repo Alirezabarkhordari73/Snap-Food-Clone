@@ -28,6 +28,7 @@ import { ReactComponent as SignUpLevel1 } from "../Assets/Images/Signup1.svg";
 import { ReactComponent as SignUpLevel2 } from "../Assets/Images/Signup2.svg";
 import { ReactComponent as SignUpLevel3 } from "../Assets/Images/Signup3.svg";
 import { ReactComponent as SignUpLevel4 } from "../Assets/Images/Signup4.svg";
+import { Link } from "react-router-dom";
 
 const SignUpOwners = () => {
   let [dropMenuOneIsOpen, setDropMenuOneIsOpen] = useState(false);
@@ -50,20 +51,22 @@ const SignUpOwners = () => {
       <div className="SignUpPage">
         <div className="w-full flex justify-center">
           <div className="w-[78%] flex justify-between items-center px-1">
-            <ul className="flex justify-center items-center gap-5 text-[#fff] text-[1.2rem]">
+            <ul className="hidden lg:flex justify-center items-center gap-5 text-[#fff] text-[1.2rem]">
               <li>وبلاگ فروشندگان</li>
               <li>مراحل ثبت نام</li>
               <li>سوالات متداول</li>
             </ul>
-            <div className="flex justify-center items-center gap-5">
+            <div className="flex justify-between w-full lg:w-[400px] lg:justify-center items-center gap-5">
               <button className="w-[250px] h-[3rem] text-[#fff] bg-[#ff00a4] rounded-small font-semibold">
                 نرم افزار دخل مشتریان
               </button>
-              <img
-                src={Logo}
-                alt="Logo"
-                className="w-[90px] h-[90px] object-contain"
-              />
+              <Link to="/">
+                <img
+                  src={Logo}
+                  alt="Logo"
+                  className="w-[90px] h-[90px] object-contain"
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -113,7 +116,7 @@ const SignUpOwners = () => {
           </div>
 
           <div className="w-full lg:w-1/2 h-full flex justify-center items-start mt-7">
-            <div className="w-[97%] lg:w-[65%] bg-white h-[80%] rounded-medium flex flex-col justify-start items-center p-3 gap-5 my-2">
+            <div className="w-[97%] lg:w-[65%] bg-white h-[80%] rounded-medium flex flex-col justify-start items-center p-3 gap-5 my-4">
               <h1 className="text-larg my-5">فرم ثبت نام فروشندگان</h1>
               <div className="w-[90%] lg:w-[25vw] relative border-[1px] border-[#eaeaea] rounded-medium">
                 <button
@@ -363,7 +366,7 @@ const SignUpOwners = () => {
       </div>
 
       <section className="w-full my-28 flex justify-center items-center">
-        <div className="w-[75%] h-[280px] bg-white Card-Shadow rounded-medium flex justify-around items-center px-5">
+        <div className="w-[96%] lg:w-[75%] lg:h-[280px] bg-white Card-Shadow rounded-medium flex flex-col lg:flex-row justify-around items-center px-5 py-5 gap-8 lg:gap2">
           <div className="flex flex-col justify-center items-center gap-3">
             <div className="w-16 h-16 bg-pink-100 rounded-full flex justify-center items-center">
               <RxCounterClockwiseClock className="text-[1.5rem] text-[#ff00b3]" />
@@ -392,29 +395,41 @@ const SignUpOwners = () => {
 
       <section className="mt-20 flex flex-col justify-start items-center">
         <h1 className="text-[2.1rem] font-semibold">مزایای فروش در اسنپ فود</h1>
-        <div className="w-full flex justify-center items-center gap-12">
+        <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-10 lg:px-5">
           <div className="flex flex-col justify-center items-center gap-3">
             <BsHeadset className="text-[2rem] text-[#ff00b3]" />
-            <h1 className="text-[1.2rem]">میلیون ها مشتری</h1>
-            <p>در اسنپ فود</p>
+            <h1 className="text-[1.2rem]">
+              پشتیبانی کامل مشتریان و فروشگاه‌ها
+            </h1>
+            <p className="text-[#757575]">
+              با پشتیبانی ویژه در خدمت شما و مشتریان هستیم
+            </p>
           </div>
 
           <div className="flex flex-col justify-center items-center gap-3">
             <BsArrowUpRight className="text-[2rem] text-[#ff00b3]" />
-            <h1 className="text-[1.2rem]">میلیون ها مشتری</h1>
-            <p>در اسنپ فود</p>
+            <h1 className="text-[1.2rem]">تا ۳ برابر امکان افزایش فروش</h1>
+            <p className="text-[#757575]">
+              ارائه خدمات باکیفیت با شما، افزایش فروش با ما
+            </p>
           </div>
 
           <div className="flex flex-col justify-center items-center gap-3">
             <BsShopWindow className="text-[2rem] text-[#ff00b3]" />
-            <h1 className="text-[1.2rem]">میلیون ها مشتری</h1>
-            <p>در اسنپ فود</p>
+            <h1 className="text-[1.2rem]">امکان تحویل با سرویس اکسپرس</h1>
+            <p className="text-[#757575]">
+              درصورت تمایل می‌توانید برای ارسال از سرویس اکسپرس استفاده نمایید
+            </p>
           </div>
 
           <div className="flex flex-col justify-center items-center gap-3">
             <BsFillPersonPlusFill className="text-[2rem] text-[#ff00b3]" />
-            <h1 className="text-[1.2rem]">میلیون ها مشتری</h1>
-            <p>در اسنپ فود</p>
+            <h1 className="text-[1.2rem]">
+              بزرگترین سامانه آنلاین فروش مایحتاج روزانه
+            </h1>
+            <p className="text-[#757575]">
+              اسنپ‌فود اولین و بزرگترین سیستم فروش آنلاین در ایران
+            </p>
           </div>
         </div>
       </section>
