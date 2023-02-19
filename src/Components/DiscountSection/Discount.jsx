@@ -23,7 +23,7 @@ const Discount = () => {
   const { handleModal, modalActivateState, isModalClicked } = useStateContext();
   const [selectedProductId, setselectedProductId] = useState(0);
 
-  const THREE_DAYS_IN_MS = 8 * 24 * 60 * 60 * 1000;
+  const THREE_DAYS_IN_MS = 1 * 15 * 60 * 60 * 1000;
   const NOW_IN_MS = new Date().getTime();
   const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 

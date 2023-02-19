@@ -12,8 +12,10 @@ import {
 } from "react-icons/bs";
 import { RxCounterClockwiseClock } from "react-icons/rx";
 
+import { Footer } from "../Components/Index";
+
 import Logo from "../Assets/Images/Logo.png";
-import { cities } from "../data";
+import { cities, commonQuestions } from "../data";
 import img1 from "../Assets/Images/1.jpg";
 import img2 from "../Assets/Images/2.jpg";
 import img3 from "../Assets/Images/3.jpg";
@@ -393,7 +395,7 @@ const SignUpOwners = () => {
         </div>
       </section>
 
-      <section className="mt-20 flex flex-col justify-start items-center">
+      <section className="mt-20 flex flex-col justify-start items-center mb-10">
         <h1 className="text-[2.1rem] font-semibold">مزایای فروش در اسنپ فود</h1>
         <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-10 lg:px-5">
           <div className="flex flex-col justify-center items-center gap-3">
@@ -433,6 +435,17 @@ const SignUpOwners = () => {
           </div>
         </div>
       </section>
+      <section className="w-full flex flex-col justify-start items-center mt-28">
+        <h1 className="text-[2rem]">سوالات متداول</h1>
+        <div className="w-[80%] flex flex-col justify-start items-start h-[500px] rounded-small mt-10">
+          {commonQuestions.map((item) => (
+            <div className="bg-[#e7e7e7] px-2 py-5 w-full border-[0.5px] border-[#dfdfdf]">
+              {item.question}
+            </div>
+          ))}
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 };
