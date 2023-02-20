@@ -54,6 +54,7 @@ function App() {
             <Route path="/newexperiences/:id" element={<Products />} />
             <Route path="/toprated/:id" element={<Products />} />
             <Route path="/withdiscount/:id" element={<Products />} />
+            <Route path="/iscoupons/:id" element={<Products />} />
             <Route path="/SignUp-Owners" element={<SignUpOwners />} />
           </Routes>
         </BrowserRouter>

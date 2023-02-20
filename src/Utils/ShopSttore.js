@@ -69,7 +69,8 @@ const useShopStore = create(
         if (
           categoryname === "newexperiences" ||
           categoryname === "toprated" ||
-          categoryname === "withdiscount"
+          categoryname === "withdiscount" ||
+          categoryname === "iscoupons"
         ) {
           const data = allResturantData.filter((item) => item.id === id);
           console.log(data);

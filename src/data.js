@@ -2627,6 +2627,10 @@ export const allResturantData = [
     isDiscount: false,
     isJustInSnapp: false,
     routName: "iscoupons",
+    coupons: [
+      "ارسال رایگان با سفارش حداقل 300 هزار تومن",
+      "5 درصد تخفیف مخصوص سفارش اول",
+    ],
     products: [
       {
         id: 1,

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import {
   BsChevronDown,
@@ -30,7 +31,8 @@ import { ReactComponent as SignUpLevel1 } from "../Assets/Images/Signup1.svg";
 import { ReactComponent as SignUpLevel2 } from "../Assets/Images/Signup2.svg";
 import { ReactComponent as SignUpLevel3 } from "../Assets/Images/Signup3.svg";
 import { ReactComponent as SignUpLevel4 } from "../Assets/Images/Signup4.svg";
-import { Link } from "react-router-dom";
+import Mobile from "../Assets/Images/Mobile.png";
+import Bazar from "../Assets/Images/bazar2.png";
 
 const SignUpOwners = () => {
   let [dropMenuOneIsOpen, setDropMenuOneIsOpen] = useState(false);
@@ -439,10 +441,47 @@ const SignUpOwners = () => {
         <h1 className="text-[2rem]">سوالات متداول</h1>
         <div className="w-[80%] flex flex-col justify-start items-start h-[500px] rounded-small mt-10">
           {commonQuestions.map((item) => (
-            <div className="bg-[#e7e7e7] px-2 py-5 w-full border-[0.5px] border-[#dfdfdf]">
-              {item.question}
+            <div className="bg-[#e7e7e7] px-2 py-5 w-full border-[0.5px] border-[#dfdfdf] flex justify-start items-center gap-3">
+              <BsChevronDown className="text-[#ff00b3] text-[1.2rem]" />
+              <p>{item.question}</p>
             </div>
           ))}
+        </div>
+      </section>
+      <section className="bg-[#22a958] w-full h-[900px] flex flex-col justify-center items-center">
+        <div className="w-full flex justify-center items-center">
+          <div className="w-[65%] mt-12">
+            <h1 className="text-[1.9rem] text-white font-semibold">
+              دانلود نرم افزار دخل
+            </h1>
+            <p className="text-[1.2rem] text-white mt-4">
+              با استفاده از نرم‌افزار دخل محصولات خود را مدیریت کنید. نظرات
+              مشتریان خود را مشاهده کنید و به آن‌ها پاسخ دهید. به گزارش فروش و
+              حسابداری خود دسترسی داشته باشید. برای آشنایی با دیگر امکانات دخل
+              آن را دانلود کنید.
+            </p>
+            <div className="mt-6 flex justify-start items-start gap-4">
+              <button className="w-[180px] h-[2.7rem] bg-black rounded-medium text-white flex justify-center items-center gap-4">
+                دریافت از
+                <img src={Bazar} alt="" className="w-[50px] object-contain" />
+              </button>
+              <button className="w-[180px] h-[2.7rem] bg-black rounded-medium text-white flex justify-center items-center gap-4">
+                دریافت از
+                <img src={Bazar} alt="" className="w-[50px] object-contain" />
+              </button>
+              <button className="w-[180px] h-[2.7rem] bg-black rounded-medium text-white flex justify-center items-center gap-4">
+                دریافت از
+                <img src={Bazar} alt="" className="w-[50px] object-contain" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="w-full h-full relative">
+          <img
+            src={Mobile}
+            className="absolute bottom-0 right-[22%] object-contain w-[780px]"
+            alt=""
+          />
         </div>
       </section>
       <Footer />
