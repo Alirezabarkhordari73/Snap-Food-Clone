@@ -24,6 +24,7 @@ import {
   Sandwich,
   Fried,
   SignUpOwners,
+  Pasta,
 } from "./Pages/index";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
             <Route path="/berger" element={<Berger />} />
             <Route path="/sandwich" element={<Sandwich />} />
             <Route path="/fried" element={<Fried />} />
+            <Route path="/pasta" element={<Pasta />} />
             <Route path="/cafe/:id" element={<Cafe />} />
             <Route path="/cookies/:id" element={<Cookies />} />
             <Route path="/breads/:id" element={<Breads />} />

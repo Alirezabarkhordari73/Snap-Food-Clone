@@ -10,7 +10,7 @@ import { SiAparat } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <div className="w-full min-h-[300px] bg-[#f5f5f5] flex-wrap lg:flex mt-16">
+    <div className="w-full min-h-[300px] bg-[#f5f5f5] flex-wrap lg:flex">
       <div className="basis-[45%] p-8">
         <div className="flex items-center gap-4">
           <Link to="/">

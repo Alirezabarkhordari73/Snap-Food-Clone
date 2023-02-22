@@ -19,3 +19,4 @@ export { default as Berger } from "./Berger";
 export { default as Sandwich } from "./Sandwich";
 export { default as Fried } from "./Fried";
 export { default as SignUpOwners } from "./SignUpOwners";
+export { default as Pasta } from "./Pasta";
