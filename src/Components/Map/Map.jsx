@@ -1,64 +1,62 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef, useMemo } from "react";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import useGeoLocation from "../../Hooks/useGeoLocation";
+const center = {
+  lat: 35.715298,
+  lng: 51.404343,
+};
+const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org/search?";
+const params = {
+  q: "",
+  format: "json",
+  addressdetails: "addressdetails",
+};
 
 const Map = () => {
-  const { location } = useGeoLocation();
+  const [position, setPosition] = useState(center);
 
-  // function LocationMarker() {
-  //   const [position, setPosition] = useState(null);
-  //   const [bbox, setBbox] = useState([]);
+  const markerRef = useRef();
 
-  //   const map = useMap();
+  console.log(position);
 
-  //   useEffect(() => {
-  //     map.locate().on("locationfound", function (e) {
-  //       // setPosition(e.latlng);
-  //       // map.flyTo(e.latlng, map.getZoom());
-  //       // const radius = e.accuracy;
-  //       // const circle = L.circle(e.latlng, radius);
-  //       // circle.addTo(map);
-  //       setBbox(e.bounds.toBBoxString().split(","));
-  //       console.log(e.latlng);
-  //     });
-  //   }, [map]);
+  const icon = L.icon({
+    iconUrl: "./location.png",
+    iconSize: [40, 40],
+  });
 
-  //   return position === null ? null : (
-  //     <Marker position={position} icon={icon}>
-  //       <Popup>
-  //         You are here. <br />
-  //         Map bbox: <br />
-  //         <b>Southwest lng</b>: {bbox[0]} <br />
-  //         <b>Southwest lat</b>: {bbox[1]} <br />
-  //         <b>Northeast lng</b>: {bbox[2]} <br />
-  //         <b>Northeast lat</b>: {bbox[3]}
-  //       </Popup>
-  //     </Marker>
-  //   );
-  // }
+  function DraggableMarker() {
+    const eventHandlers = useMemo(
+      () => ({
+        dragend() {
+          const marker = markerRef.current;
+          if (marker != null) {
+            setPosition(marker.getLatLng());
+          }
+        },
+      }),
+      []
+    );
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
-      // setLatitude(position.coords.latitude);
-      // setLongitude(position.coords.longitude);
-    });
-  }, []);
+    return (
+      <Marker
+        draggable={true}
+        eventHandlers={eventHandlers}
+        position={position}
+        ref={markerRef}
+        icon={icon}
+      ></Marker>
+    );
+  }
 
   return (
-    <MapContainer center={[35.715298, 51.404343]} zoom={11}>
+    <MapContainer center={center} zoom={11}>
       <TileLayer
-        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png "
       />
-      <Marker position={[35.715298, 51.404343]}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
-      {/* <LocationMarker /> */}
+      <DraggableMarker />
     </MapContainer>
     // <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
     //   <TileLayer

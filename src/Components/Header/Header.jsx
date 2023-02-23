@@ -103,7 +103,7 @@ const Header = () => {
             onClick={(event) => noLink(event)}
             className="flex justify-center items-center"
           >
-            <div className="w-[30rem] md:w-[35rem] lg:w-[40rem] h-[75vh] bg-white rounded-medium p-3 flex flex-col justify-between items-center gap-2 Card-Shadow">
+            <div className="w-[35rem] md:w-[40rem] lg:w-[48rem] h-[90vh] bg-white rounded-medium p-3 flex flex-col justify-between items-center gap-2 Card-Shadow">
               <div className="w-full">
                 <AiOutlineClose
                   className="mb-3 cursor-pointer"
@@ -115,8 +115,12 @@ const Header = () => {
                   مشخص کنید .
                 </p>
               </div>
-              <div className="w-[100%] h-[85%] mt-2">
+              <div className="w-[100%] h-[85%] relative mt-2">
                 <Map />
+                <input
+                  type="text"
+                  className="absolute w-[90%] h-[2.8rem] top-3 right-2 z-[10000] px-2"
+                />
               </div>
               <button className="w-full h-[3rem] bg-[hsl(321,100%,50%)] rounded-medium text-xl font-bold text-white mt-3">
                 تایید
