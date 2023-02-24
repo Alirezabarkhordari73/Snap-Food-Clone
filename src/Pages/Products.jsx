@@ -32,18 +32,18 @@ const Products = () => {
   useEffect(() => {
     getProducts(urlCategoryName[0], parseInt(urlId[0]));
   }, []);
+  console.log(newExperience);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log("newExperience", newExperience);
   return (
     <Layout>
       <main className="w-full relative bg-[#f5f5f5]">
         <BreadCrumbs />
         <div className="w-full h-[70px]"></div>
-        <div className="flex items-start justify-between">
+        <div className="flex flex-col justify-start items-center md:flex-row md:items-start md:justify-between">
           <ProductSideBar dataSource={newExperience} />
           <ShowProducts dataSource={newExperience} />
           <ProductLeftSideBar />

@@ -1,19 +1,19 @@
 import React from "react";
 
-import { BsFillPinAngleFill, BsFillStarFill } from "react-icons/bs";
+import { BsFillStarFill } from "react-icons/bs";
 const ProductSideBar = ({ dataSource }) => {
   return (
-    <div className="w-1/3 h-full flex flex-col justify-start items-center ml-4 top-[75px] right-0 sticky mb-5 mr-3 gap-7">
+    <div className="w-full h-[200px] md:w-1/2 lg:w-1/3 lg:h-full flex flex-col justify-start items-center ml-4 top-[75px] right-0 md:sticky mb-5 mr-1 gap-7">
       {dataSource.map((item) => (
         <section
           key={item.id}
-          className="w-full h-[400px] rounded-medium p-3 flex flex-col justify-start items-start"
+          className="w-full h-[400px] rounded-medium p-1 flex flex-col justify-start items-start"
         >
           <header className="flex w-full gap-3">
             <img
               src={item.resturantImage}
               alt={item.resturantName}
-              className="w-[110px] h-[110px] rounded-medium"
+              className="w-[90px] h-[90px] rounded-medium"
             />
             <div className="flex flex-col justify-between items-start">
               <div className="flex items-center gap-1">

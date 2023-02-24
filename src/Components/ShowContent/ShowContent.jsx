@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { BsFillPinAngleFill, BsFillStarFill } from "react-icons/bs";
 import { RiEBike2Fill } from "react-icons/ri";
@@ -11,11 +12,13 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 
 const ShowContent = ({ dataSource }) => {
+  console.log(dataSource);
   return (
     <div className="w-[100%]">
       <section className="grid grid-cols-1 lg:grid-cols-3 w-full gap-5 p-3">
         {dataSource.map((item) => (
-          <div
+          <Link
+            to={`/showproduct/${item.id}`}
             key={item.id}
             className="bg-white relative w-[50%px] h-[400px] rounded-medium flex flex-col items-center justify-start cursor-pointer Card-Shadow2 hover:Card-Shadow3"
           >
@@ -60,7 +63,7 @@ const ShowContent = ({ dataSource }) => {
               </div>
               <p>{item.deliveryPrice} تومان</p>
             </div>
-          </div>
+          </Link>
         ))}
       </section>
     </div>

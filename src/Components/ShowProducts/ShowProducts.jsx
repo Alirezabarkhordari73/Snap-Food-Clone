@@ -9,7 +9,7 @@ import "react-lazy-load-image-component/src/effects/opacity.css";
 
 const ShowProducts = ({ dataSource }) => {
   return (
-    <div className="w-[80%] min-h-full flex flex-col bg-white Card-Shadow2 mb-16">
+    <div className="w-[97%] md:w-1/2 lg:w-[80%] min-h-full flex flex-col bg-white Card-Shadow2 mb-16">
       <div className="w-full h-[130px] flex flex-col justify-start items-center p-3">
         <p>کوپن ها</p>
         <div className="w-full flex gap-5 mt-3">
@@ -25,7 +25,7 @@ const ShowProducts = ({ dataSource }) => {
           )}
         </div>
       </div>
-      <div className="w-full h-full grid grid-cols-2">
+      <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2">
         {dataSource.map((item) =>
           item.products.map((item) => (
             <div

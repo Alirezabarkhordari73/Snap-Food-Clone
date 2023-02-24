@@ -70,7 +70,8 @@ const useShopStore = create(
           categoryname === "newexperiences" ||
           categoryname === "toprated" ||
           categoryname === "withdiscount" ||
-          categoryname === "iscoupons"
+          categoryname === "iscoupons" ||
+          categoryname === "showproduct"
         ) {
           const data = allResturantData.filter((item) => item.id === id);
           console.log(data);

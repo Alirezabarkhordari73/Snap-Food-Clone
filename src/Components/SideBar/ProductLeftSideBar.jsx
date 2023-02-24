@@ -6,7 +6,7 @@ import { RiEBike2Fill } from "react-icons/ri";
 
 const ProductLeftSideBar = () => {
   return (
-    <div className="w-1/3 h-full flex flex-col justify-start items-center ml-4 top-[75px] right-0 sticky mb-5 mr-3 gap-3 px-1">
+    <div className="hidden lg:w-1/3 h-full lg:flex flex-col justify-start items-center ml-4 top-[75px] right-0 md:sticky mb-5 mr-3 gap-3 px-1">
       <div className="w-full flex justify-between items-center gap-1 bg-white rounded-medium px-2 py-4 Card-Shadow2">
         <div className="flex gap-1 items-center">
           <AiOutlineClockCircle />

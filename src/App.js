@@ -58,6 +58,7 @@ function App() {
             <Route path="/withdiscount/:id" element={<Products />} />
             <Route path="/iscoupons/:id" element={<Products />} />
             <Route path="/SignUp-Owners" element={<SignUpOwners />} />
+            <Route path="/showproduct/:id" element={<Products />} />
           </Routes>
         </BrowserRouter>
       </ContextProvider>
