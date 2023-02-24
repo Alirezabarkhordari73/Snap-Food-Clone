@@ -6,6 +6,12 @@ import {
 } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "react-lazy-load-image-component/src/effects/opacity.css";
+import { FreeMode, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const ShowProducts = ({ dataSource }) => {
   return (
@@ -15,10 +21,7 @@ const ShowProducts = ({ dataSource }) => {
         <div className="w-full flex gap-5 mt-3">
           {dataSource.map((item) =>
             item.coupons.map((item, index) => (
-              <div
-                key={index}
-                className="bg-[#eee] w-[230px] p-1 text-small text-[#b6b6b6] rounded-medium border-[0.5px] border-[#d8d8d8] flex justify-center items-center"
-              >
+              <div className="bg-[#eee] w-[230px] p-1 text-small text-[#b6b6b6] rounded-medium border-[0.5px] border-[#d8d8d8] flex justify-center items-center">
                 {item}
               </div>
             ))

@@ -10681,8 +10681,6 @@ export const allResturantData = [
     coupons: [
       "ارسال رایگان با سفارش حداقل 300 هزار تومن",
       "5 درصد تخفیف مخصوص سفارش اول",
-      "ارسال رایگان با سفارش حداقل 300 هزار تومن",
-      "5 درصد تخفیف مخصوص سفارش اول",
     ],
     products: [
       {
@@ -11003,7 +11001,7 @@ export const allResturantData = [
     ],
   },
   {
-    id: 59,
+    id: 60,
     resturantName: "پیتزا بوته",
     resturantImage: "/images/AllData/R41.png",
     foodImage: "/images/AllData/RF41.jpg",
@@ -11033,8 +11031,6 @@ export const allResturantData = [
     isJustInSnapp: false,
     routName: "",
     coupons: [
-      "ارسال رایگان با سفارش حداقل 300 هزار تومن",
-      "5 درصد تخفیف مخصوص سفارش اول",
       "ارسال رایگان با سفارش حداقل 300 هزار تومن",
       "5 درصد تخفیف مخصوص سفارش اول",
     ],
