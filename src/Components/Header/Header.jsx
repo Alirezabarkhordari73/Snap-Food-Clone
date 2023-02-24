@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Logo from "../../Assets/Images/Logo.png";
@@ -10,7 +10,12 @@ import { BsChevronDown, BsShopWindow } from "react-icons/bs";
 import { Map, Modal } from "../Index";
 import { useStateContext } from "../../Context/StateContext";
 
+const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org/search?";
+
 const Header = () => {
+  const [searchText, setSearchText] = useState("");
+  const [listPlace, setListPlace] = useState([]);
+
   const { handleModal, modalActivateState, noLink } = useStateContext();
 
   return (
@@ -117,12 +122,43 @@ const Header = () => {
               </div>
               <div className="w-[100%] h-[85%] relative mt-2">
                 <Map />
-                <input
-                  type="text"
-                  className="absolute w-[90%] h-[2.8rem] top-3 right-2 z-[10000] px-2"
-                />
+                <button className="absolute flex justify-between items-center gap-2 bg-white rounded-small w-[90%] h-[2.8rem] top-3 right-2 z-[10000] px-2 Card-Shadow2 outline-none">
+                  <input
+                    type="text"
+                    value={searchText}
+                    className="w-[100%] h-[100%] bg-transparent rounded-md outline-none"
+                    placeholder="جست و جوی منطقه"
+                    onChange={(event) => {
+                      setSearchText(event.target.value);
+                    }}
+                  />
+                  <CiSearch className="text-medium text-[#575757]" />
+                </button>
               </div>
-              <button className="w-full h-[3rem] bg-[hsl(321,100%,50%)] rounded-medium text-xl font-bold text-white mt-3">
+              <button
+                onClick={() => {
+                  // Search
+                  const params = {
+                    q: searchText,
+                    format: "json",
+                    addressdetails: 1,
+                    polygon_geojson: 0,
+                  };
+                  const queryString = new URLSearchParams(params).toString();
+                  const requestOptions = {
+                    method: "GET",
+                    redirect: "follow",
+                  };
+                  fetch(`${NOMINATIM_BASE_URL}${queryString}`, requestOptions)
+                    .then((response) => response.text())
+                    .then((result) => {
+                      console.log(JSON.parse(result));
+                      setListPlace(JSON.parse(result));
+                    })
+                    .catch((err) => console.log("err: ", err));
+                }}
+                className="w-full h-[3rem] bg-[hsl(321,100%,50%)] rounded-medium text-xl font-bold text-white mt-3 hover:bg-[#e80097] transition-all duration-200"
+              >
                 تایید
               </button>
             </div>

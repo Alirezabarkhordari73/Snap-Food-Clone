@@ -9345,7 +9345,7 @@ export const allResturantData = [
       usersVotesCount: 151,
     },
     freeDeliverByOrder: false,
-    category: ["برگر", "پیتزا", "فست فود", "رستوران", "ساندویچ"],
+    category: ["برگر", "پیتزا", "فست فود", "رستوران", "ساندویچ", "پاستا"],
     filterBtns: ["express"],
     isTopRate: false,
     isNewExperience: true,
@@ -9598,6 +9598,51 @@ export const allResturantData = [
         image: "/images/fastfood/F30.jpg",
         price: 25000,
       },
+      {
+        id: 28,
+        title: "مرغ سوخاری خانواده (نرمال)",
+        ingredients:
+          "۸ تکه مرغ سوخاری، به همراه ۴ پرس سیب زمینی سرخ کرده، ۴ عدد سالاد کلم، ۴ عدد نان بروتچن، یک عدد نوشابه خانواده",
+        inStock: 30,
+        image: "/images/fastfood/F33.jpg",
+        price: 215000,
+      },
+      {
+        id: 29,
+        title: "پاستا آلفردو",
+        ingredients:
+          "۱۸۰ گرم پنه سفید، فیله مرغ ۱۵۰گرم ، قارچ اسلایس پخته ۵۰ گرم ، سس خامه آلفرد با طعم سفید ، پنیر پارمسان",
+        inStock: 30,
+        image: "/images/Pasta/F1.jpeg",
+        price: 198000,
+      },
+      {
+        id: 30,
+        title: "پاستا مارینرا",
+        ingredients:
+          "۱۸۰ گرم پنه سفید، فیله مرغ ۱۵۰گرم ، قارچ اسلایس پخته ۵۰ گرم ، سس خامه آلفرد با طعم سفید ، پنیر پارمسان",
+        inStock: 30,
+        image: "/images/Pasta/F2.jpeg",
+        price: 198000,
+      },
+      {
+        id: 31,
+        title: "پاستا اسپشیال",
+        ingredients:
+          "پاستای انتخابی سرآشپز ۱۸۰ گرم، سس گوجه طعم دار شده با شیر و ادویه مخصوص، ۱۰۰ گرم، خامه و شیر به همراه قارچ اسلایس، پنیر پارمسان ۱۰ گرم",
+        inStock: 30,
+        image: "/images/Pasta/F3.jpeg",
+        price: 198000,
+      },
+      {
+        id: 32,
+        title: "پاستا آلفردو",
+        ingredients:
+          "پاستای انتخابی سرآشپز ۱۸۰ گرم، سس گوجه طعم دار شده با شیر و ادویه مخصوص، ۱۰۰ گرم، خامه و شیر به همراه قارچ اسلایس، پنیر پارمسان ۱۰ گرم",
+        inStock: 30,
+        image: "/images/Pasta/F3.jpeg",
+        price: 198000,
+      },
     ],
     drinks: [
       {
@@ -9646,7 +9691,7 @@ export const allResturantData = [
       usersVotesCount: 151,
     },
     freeDeliverByOrder: true,
-    category: ["برگر", "پیتزا", "فست فود", "رستوران", "ساندویچ"],
+    category: ["برگر", "پیتزا", "فست فود", "رستوران", "ساندویچ", "پاستا"],
     filterBtns: ["discount"],
     isTopRate: false,
     isNewExperience: true,
@@ -9898,6 +9943,51 @@ export const allResturantData = [
         inStock: 30,
         image: "/images/fastfood/F30.jpg",
         price: 25000,
+      },
+      {
+        id: 28,
+        title: "مرغ سوخاری خانواده (نرمال)",
+        ingredients:
+          "۸ تکه مرغ سوخاری، به همراه ۴ پرس سیب زمینی سرخ کرده، ۴ عدد سالاد کلم، ۴ عدد نان بروتچن، یک عدد نوشابه خانواده",
+        inStock: 30,
+        image: "/images/fastfood/F33.jpg",
+        price: 215000,
+      },
+      {
+        id: 29,
+        title: "پاستا آلفردو",
+        ingredients:
+          "۱۸۰ گرم پنه سفید، فیله مرغ ۱۵۰گرم ، قارچ اسلایس پخته ۵۰ گرم ، سس خامه آلفرد با طعم سفید ، پنیر پارمسان",
+        inStock: 30,
+        image: "/images/Pasta/F1.jpeg",
+        price: 198000,
+      },
+      {
+        id: 30,
+        title: "پاستا مارینرا",
+        ingredients:
+          "۱۸۰ گرم پنه سفید، فیله مرغ ۱۵۰گرم ، قارچ اسلایس پخته ۵۰ گرم ، سس خامه آلفرد با طعم سفید ، پنیر پارمسان",
+        inStock: 30,
+        image: "/images/Pasta/F2.jpeg",
+        price: 198000,
+      },
+      {
+        id: 31,
+        title: "پاستا اسپشیال",
+        ingredients:
+          "پاستای انتخابی سرآشپز ۱۸۰ گرم، سس گوجه طعم دار شده با شیر و ادویه مخصوص، ۱۰۰ گرم، خامه و شیر به همراه قارچ اسلایس، پنیر پارمسان ۱۰ گرم",
+        inStock: 30,
+        image: "/images/Pasta/F3.jpeg",
+        price: 198000,
+      },
+      {
+        id: 32,
+        title: "پاستا آلفردو",
+        ingredients:
+          "پاستای انتخابی سرآشپز ۱۸۰ گرم، سس گوجه طعم دار شده با شیر و ادویه مخصوص، ۱۰۰ گرم، خامه و شیر به همراه قارچ اسلایس، پنیر پارمسان ۱۰ گرم",
+        inStock: 30,
+        image: "/images/Pasta/F3.jpeg",
+        price: 198000,
       },
     ],
     drinks: [
@@ -10519,6 +10609,42 @@ export const allResturantData = [
         image: "/images/fastfood/F33.jpg",
         price: 215000,
       },
+      {
+        id: 29,
+        title: "پاستا آلفردو",
+        ingredients:
+          "۱۸۰ گرم پنه سفید، فیله مرغ ۱۵۰گرم ، قارچ اسلایس پخته ۵۰ گرم ، سس خامه آلفرد با طعم سفید ، پنیر پارمسان",
+        inStock: 30,
+        image: "/images/Pasta/F1.jpeg",
+        price: 198000,
+      },
+      {
+        id: 30,
+        title: "پاستا مارینرا",
+        ingredients:
+          "۱۸۰ گرم پنه سفید، فیله مرغ ۱۵۰گرم ، قارچ اسلایس پخته ۵۰ گرم ، سس خامه آلفرد با طعم سفید ، پنیر پارمسان",
+        inStock: 30,
+        image: "/images/Pasta/F2.jpeg",
+        price: 198000,
+      },
+      {
+        id: 31,
+        title: "پاستا اسپشیال",
+        ingredients:
+          "پاستای انتخابی سرآشپز ۱۸۰ گرم، سس گوجه طعم دار شده با شیر و ادویه مخصوص، ۱۰۰ گرم، خامه و شیر به همراه قارچ اسلایس، پنیر پارمسان ۱۰ گرم",
+        inStock: 30,
+        image: "/images/Pasta/F3.jpeg",
+        price: 198000,
+      },
+      {
+        id: 32,
+        title: "پاستا آلفردو",
+        ingredients:
+          "پاستای انتخابی سرآشپز ۱۸۰ گرم، سس گوجه طعم دار شده با شیر و ادویه مخصوص، ۱۰۰ گرم، خامه و شیر به همراه قارچ اسلایس، پنیر پارمسان ۱۰ گرم",
+        inStock: 30,
+        image: "/images/Pasta/F3.jpeg",
+        price: 198000,
+      },
     ],
     drinks: [
       {
@@ -10836,6 +10962,42 @@ export const allResturantData = [
         inStock: 30,
         image: "/images/fastfood/F33.jpg",
         price: 215000,
+      },
+      {
+        id: 29,
+        title: "پاستا آلفردو",
+        ingredients:
+          "۱۸۰ گرم پنه سفید، فیله مرغ ۱۵۰گرم ، قارچ اسلایس پخته ۵۰ گرم ، سس خامه آلفرد با طعم سفید ، پنیر پارمسان",
+        inStock: 30,
+        image: "/images/Pasta/F1.jpeg",
+        price: 198000,
+      },
+      {
+        id: 30,
+        title: "پاستا مارینرا",
+        ingredients:
+          "۱۸۰ گرم پنه سفید، فیله مرغ ۱۵۰گرم ، قارچ اسلایس پخته ۵۰ گرم ، سس خامه آلفرد با طعم سفید ، پنیر پارمسان",
+        inStock: 30,
+        image: "/images/Pasta/F2.jpeg",
+        price: 198000,
+      },
+      {
+        id: 31,
+        title: "پاستا اسپشیال",
+        ingredients:
+          "پاستای انتخابی سرآشپز ۱۸۰ گرم، سس گوجه طعم دار شده با شیر و ادویه مخصوص، ۱۰۰ گرم، خامه و شیر به همراه قارچ اسلایس، پنیر پارمسان ۱۰ گرم",
+        inStock: 30,
+        image: "/images/Pasta/F3.jpeg",
+        price: 198000,
+      },
+      {
+        id: 32,
+        title: "پاستا آلفردو",
+        ingredients:
+          "پاستای انتخابی سرآشپز ۱۸۰ گرم، سس گوجه طعم دار شده با شیر و ادویه مخصوص، ۱۰۰ گرم، خامه و شیر به همراه قارچ اسلایس، پنیر پارمسان ۱۰ گرم",
+        inStock: 30,
+        image: "/images/Pasta/F3.jpeg",
+        price: 198000,
       },
     ],
     drinks: [

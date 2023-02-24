@@ -51,10 +51,10 @@ const Map = () => {
   }
 
   return (
-    <MapContainer center={center} zoom={11}>
+    <MapContainer center={center} zoom={14}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png "
+        url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png"
       />
       <DraggableMarker />
     </MapContainer>
