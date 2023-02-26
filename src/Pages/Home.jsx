@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useState, useEffect } from "react";
 
 import {
   DownLoadSection,
@@ -10,17 +10,25 @@ import {
   WithDiscounts,
   WithCoupon,
   Banner,
+  Modal,
 } from "../Components/Index";
 import Layout from "../Components/Layout/Layout";
 import useShopStore from "../Utils/ShopSttore";
 
 const Home = () => {
+  const [modaPopUp, setModalPopUp] = useState(false);
   const { backToDefault } = useShopStore((state) => ({
     backToDefault: state.backToDefault,
   }));
 
   useLayoutEffect(() => {
     backToDefault();
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setModalPopUp(true);
+    }, 3000);
   }, []);
 
   return (
@@ -43,6 +51,13 @@ const Home = () => {
 
         <OwnerSection />
       </div>
+      {modaPopUp ? (
+        <Modal>
+          <div className="bg-white w-[500px] h-[500px] rounded-medium Card-Shadow"></div>
+        </Modal>
+      ) : (
+        ""
+      )}
     </Layout>
   );
 };
