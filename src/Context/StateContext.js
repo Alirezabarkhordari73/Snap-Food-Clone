@@ -7,6 +7,7 @@ const initialState = {
   searchModal: false,
   signModal: false,
   discountModal: false,
+  popUpModal: false,
 };
 
 export const ContextProvider = ({ children }) => {
