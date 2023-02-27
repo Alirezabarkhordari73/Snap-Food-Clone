@@ -19,11 +19,10 @@ import {
 } from "../Components/Index";
 import Layout from "../Components/Layout/Layout";
 import useShopStore from "../Utils/ShopSttore";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [modaPopUp, setModalPopUp] = useState(false);
-
-  const { handleModal, modalActivateState, noLink } = useStateContext();
 
   const { backToDefault } = useShopStore((state) => ({
     backToDefault: state.backToDefault,
@@ -64,7 +63,7 @@ const Home = () => {
       </div>
       {modaPopUp ? (
         <Modal>
-          <div className="bg-white w-[480px] h-[420px] rounded-medium Card-Shadow">
+          <div className="bg-white w-[520px] h-[440px] rounded-medium Card-Shadow">
             <div className="w-full flex justify-between items-center px-4 py-1">
               <AiOutlineClose
                 className="mb-3 cursor-pointer text-medium"
@@ -87,6 +86,7 @@ const Home = () => {
                 <img
                   src={profile}
                   className="w-[130px] h-[130px] rounded-full"
+                  alt=""
                 />
               </div>
               <div className="w-full flex justify-center items-center mt-3">
@@ -95,6 +95,14 @@ const Home = () => {
               <div className="w-full flex justify-center mt-2">
                 <h2>نام پروژه :</h2>
                 <p>شبیه سازی وب سایت اسنپ فود</p>
+              </div>
+              <div className="w-full flex justify-center mt-2">
+                <Link
+                  className="text-[#ff00ae] text-[0.88rem]"
+                  to="https://github.com/Alirezabarkhordari73/Snap-Food-Clone"
+                >
+                  سورس پروژه - گیت هاب
+                </Link>
               </div>
             </div>
           </div>
