@@ -152,7 +152,6 @@ const Header = () => {
                   fetch(`${NOMINATIM_BASE_URL}${queryString}`, requestOptions)
                     .then((response) => response.text())
                     .then((result) => {
-                      console.log(JSON.parse(result));
                       setListPlace(JSON.parse(result));
                     })
                     .catch((err) => console.log("err: ", err));
