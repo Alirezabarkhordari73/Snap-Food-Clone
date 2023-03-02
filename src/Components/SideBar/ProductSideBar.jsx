@@ -1,7 +1,12 @@
 import React from "react";
 
 import { BsFillStarFill } from "react-icons/bs";
+
+import { useStateContext } from "../../Context/StateContext";
+import { Modal } from "../Index";
+
 const ProductSideBar = ({ dataSource }) => {
+  const { handleModal, modalActivateState, noLink } = useStateContext();
   return (
     <div className="w-full h-[200px] md:w-1/2 lg:w-1/3 lg:h-full flex flex-col justify-start items-center ml-4 top-[75px] right-0 md:sticky mb-5 mr-1 gap-7">
       {dataSource.map((item) => (
@@ -29,11 +34,24 @@ const ProductSideBar = ({ dataSource }) => {
             </div>
           </header>
 
-          <button className="w-full h-[2.5rem] Card-Shadow2 bg-white text-green-600 rounded-[3rem] mt-7">
+          <button
+            onClick={() => handleModal("usersIdeas")}
+            className="w-full h-[2.5rem] Card-Shadow2 bg-white text-green-600 rounded-[3rem] mt-7"
+          >
             اظلاعات و نظرات
           </button>
         </section>
       ))}
+      {modalActivateState.usersIdeas && (
+        <Modal ModalName={"usersIdeas"}>
+          <div
+            onClick={(event) => noLink(event)}
+            className="flex justify-center items-center"
+          >
+            <div className="w-[800px] h-[790px] bg-white rounded-medium p-3 flex flex-col justify-between items-start Card-Shadow"></div>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 };

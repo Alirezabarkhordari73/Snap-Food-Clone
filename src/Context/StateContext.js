@@ -8,6 +8,7 @@ const initialState = {
   signModal: false,
   discountModal: false,
   popUpModal: true,
+  usersIdeas: false,
 };
 
 export const ContextProvider = ({ children }) => {
@@ -22,6 +23,8 @@ export const ContextProvider = ({ children }) => {
     if (modalname === "discountModal") {
       setIsModalClicked(!isModalClicked);
     } else if (modalname === "mapModal") {
+      setIsModalClicked(!isModalClicked);
+    } else if (modalname === "usersIdeas") {
       setIsModalClicked(!isModalClicked);
     }
   };
