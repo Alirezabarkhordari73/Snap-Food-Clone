@@ -22,7 +22,7 @@ const Map = () => {
   console.log(position);
 
   const icon = L.icon({
-    iconUrl: "./location.png",
+    iconUrl: "/location.png",
     iconSize: [40, 40],
   });
 
