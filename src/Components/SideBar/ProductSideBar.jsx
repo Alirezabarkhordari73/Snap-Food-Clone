@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { BsFillStarFill, BsClock } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import { RiBankCard2Line } from "react-icons/ri";
+import { CgShoppingCart } from "react-icons/cg";
+
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
@@ -14,6 +16,15 @@ import { Modal, Map } from "../Index";
 const ProductSideBar = ({ dataSource }) => {
   const [WeekDaysClicked, setWeekDaysClicked] = useState(false);
   const { handleModal, modalActivateState, noLink } = useStateContext();
+  const DayNames = [
+    "شنبه",
+    "یکشنبه",
+    "دو شنبه",
+    "سه شنبه",
+    "چهار شنبه",
+    "پنج شنبه",
+    "جمعه",
+  ];
 
   return (
     <div className="w-full h-[200px] md:w-1/2 lg:w-1/3 lg:h-full flex flex-col justify-start items-center ml-4 top-[75px] right-0 md:sticky mb-5 mr-1 gap-7">
@@ -88,8 +99,8 @@ const ProductSideBar = ({ dataSource }) => {
                   </div>
                   <div className="w-full flex justify-between items-center px-5 py-1 mt-3">
                     <div className="flex flex-col justify-start items-center gap-1 p-2 text-[#6d6d6d]">
-                      <BsClock />
-                      <p>ساعت کاری</p>
+                      <BsClock className="text-[1.1rem]" />
+                      <p className="text-[0.8rem]">ساعت کاری</p>
                       <div className="flex justify-center items-center gap-2 text-[0.9rem]">
                         <span className="text-[#18b73a]">باز</span>
                         امروز از ساعت
@@ -109,23 +120,52 @@ const ProductSideBar = ({ dataSource }) => {
                       </div>
                     </div>
                     <div className="flex flex-col justify-start items-center gap-1 p-2 text-[#6d6d6d]">
-                      <RiBankCard2Line />
-                      <p>شیوه پرداخت</p>
+                      <RiBankCard2Line className="text-[1.1rem]" />
+                      <p className="text-[0.8rem]">شیوه پرداخت</p>
                       <div className="flex justify-center items-center gap-2 text-[0.9rem]">
                         <span>آنلاین</span>
                       </div>
                     </div>
                     <div className="flex flex-col justify-start items-center gap-1 p-2 text-[#6d6d6d]">
-                      <RiBankCard2Line />
-                      <p>شیوه پرداخت</p>
+                      <CgShoppingCart className="text-[1.1rem]" />
+                      <p className="text-[0.8rem]">حداقل سبد خرید</p>
                       <div className="flex justify-center items-center gap-2 text-[0.9rem]">
-                        <span>آنلاین</span>
+                        <span>90,000 هزار تومن</span>
                       </div>
                     </div>
                   </div>
-                  <div
-                    className={`${WeekDaysClicked ? "ShowBox" : "Box"}`}
-                  ></div>
+                  <div className={`${WeekDaysClicked ? "ShowBox" : "Box"}`}>
+                    {WeekDaysClicked &&
+                      DayNames.map((day) => (
+                        <div className="h-full gap-1 flex flex-col items-center justify-center w-[12%] text-[0.8rem] text-[#8c8c8c]">
+                          <p>{day}</p>
+                          <div className="flex justify-center items-center gap-1">
+                            <span>{item.workTime.startAt}</span>تا
+                            <span>{item.workTime.endAt}</span>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                  <div className="w-full flex justify-between items-start mt-4">
+                    <div className="w-1/3"></div>
+                    <div className="w-2/3">
+                      <div class="mb-4 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
+                        <div class="h-1 bg-[#12a81e] w-[30%]"></div>
+                      </div>
+                      <div class="mb-4 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
+                        <div class="h-1 bg-[#12a81e] w-[50%]"></div>
+                      </div>
+                      <div class="mb-4 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
+                        <div class="h-1 bg-[#12a81e] w-[10%]"></div>
+                      </div>
+                      <div class="mb-4 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
+                        <div class="h-1 bg-[#12a81e] w-[40%]"></div>
+                      </div>
+                      <div class="mb-4 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
+                        <div class="h-1 bg-[#12a81e] w-[20%]"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Modal>
