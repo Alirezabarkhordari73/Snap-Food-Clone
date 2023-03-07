@@ -147,7 +147,13 @@ const ProductSideBar = ({ dataSource }) => {
                       ))}
                   </div>
                   <div className="w-full flex justify-between items-start mt-4">
-                    <div className="w-[35%]"></div>
+                    <div className="w-[35%] flex flex-col justify-center items-start">
+                      <div className="flex items-center justify-center gap-1">
+                        <AiFillStar className="text-[#ffca4e] text-[2rem]" />
+                        <h1 className="text-[2rem]">4.2</h1>
+                      </div>
+                    </div>
+
                     <div className="w-[65%] flex flex-col px-2">
                       <div className="w-full flex justify-center items-center mb-1 gap-1">
                         <div className="w-[20%] flex justify-end items-center">
