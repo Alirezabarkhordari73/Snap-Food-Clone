@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { BsFillStarFill, BsClock } from "react-icons/bs";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiFillStar } from "react-icons/ai";
 import { RiBankCard2Line } from "react-icons/ri";
 import { CgShoppingCart } from "react-icons/cg";
 
@@ -147,22 +147,57 @@ const ProductSideBar = ({ dataSource }) => {
                       ))}
                   </div>
                   <div className="w-full flex justify-between items-start mt-4">
-                    <div className="w-1/3"></div>
-                    <div className="w-2/3">
-                      <div class="mb-4 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
-                        <div class="h-1 bg-[#12a81e] w-[30%]"></div>
+                    <div className="w-[35%]"></div>
+                    <div className="w-[65%] flex flex-col px-2">
+                      <div className="w-full flex justify-center items-center mb-1 gap-1">
+                        <div className="w-[20%] flex justify-end items-center">
+                          <AiFillStar className="text-[#dfdfdf]" />
+                          <AiFillStar className="text-[#dfdfdf]" />
+                          <AiFillStar className="text-[#dfdfdf]" />
+                          <AiFillStar className="text-[#dfdfdf]" />
+                          <AiFillStar className="text-[#dfdfdf]" />
+                        </div>
+                        <div className="h-1 w-[80%] bg-neutral-200 dark:bg-neutral-600">
+                          <div className="h-1 bg-[#12a81e] w-[30%]"></div>
+                        </div>
                       </div>
-                      <div class="mb-4 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
-                        <div class="h-1 bg-[#12a81e] w-[50%]"></div>
+                      <div className="w-full flex justify-center items-center mb-1 gap-1">
+                        <div className="w-[20%] flex justify-end items-center">
+                          <AiFillStar className="text-[#dfdfdf]" />
+                          <AiFillStar className="text-[#dfdfdf]" />
+                          <AiFillStar className="text-[#dfdfdf]" />
+                          <AiFillStar className="text-[#dfdfdf]" />
+                        </div>
+                        <div class="h-1 w-[80%] bg-neutral-200 dark:bg-neutral-600">
+                          <div class="h-1 bg-[#12a81e] w-[30%]"></div>
+                        </div>
                       </div>
-                      <div class="mb-4 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
-                        <div class="h-1 bg-[#12a81e] w-[10%]"></div>
+                      <div className="w-full flex justify-center items-center mb-1 gap-1">
+                        <div className="w-[20%] flex justify-end items-center">
+                          <AiFillStar className="text-[#dfdfdf]" />
+                          <AiFillStar className="text-[#dfdfdf]" />
+                          <AiFillStar className="text-[#dfdfdf]" />
+                        </div>
+                        <div class="h-1 w-[80%] bg-neutral-200 dark:bg-neutral-600">
+                          <div class="h-1 bg-[#12a81e] w-[30%]"></div>
+                        </div>
                       </div>
-                      <div class="mb-4 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
-                        <div class="h-1 bg-[#12a81e] w-[40%]"></div>
+                      <div className="w-full flex justify-center items-center mb-1 gap-1">
+                        <div className="w-[20%] flex justify-end items-center">
+                          <AiFillStar className="text-[#dfdfdf]" />
+                          <AiFillStar className="text-[#dfdfdf]" />
+                        </div>
+                        <div class="h-1 w-[80%] bg-neutral-200 dark:bg-neutral-600">
+                          <div class="h-1 bg-[#12a81e] w-[30%]"></div>
+                        </div>
                       </div>
-                      <div class="mb-4 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
-                        <div class="h-1 bg-[#12a81e] w-[20%]"></div>
+                      <div className="w-full flex justify-center items-center mb-1 gap-1">
+                        <div className="w-[20%] flex justify-end items-center">
+                          <AiFillStar className="text-[#dfdfdf]" />
+                        </div>
+                        <div class="h-1 w-[80%] bg-neutral-200 dark:bg-neutral-600">
+                          <div class="h-1 bg-[#12a81e] w-[30%]"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
