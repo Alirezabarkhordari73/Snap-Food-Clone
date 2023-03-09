@@ -13,8 +13,13 @@ import { useStateContext } from "../../Context/StateContext";
 const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org/search?";
 
 const Header = () => {
+  const center = {
+    lat: 35.715298,
+    lng: 51.404343,
+  };
   const [searchText, setSearchText] = useState("");
   const [listPlace, setListPlace] = useState([]);
+  console.log(listPlace);
 
   const { handleModal, modalActivateState, noLink } = useStateContext();
 
@@ -121,7 +126,7 @@ const Header = () => {
                 </p>
               </div>
               <div className="w-[100%] h-[85%] relative mt-2">
-                <Map />
+                <Map latlng={center} />
                 <button className="absolute flex justify-between items-center gap-2 bg-white rounded-small w-[90%] h-[2.8rem] top-3 right-2 z-[10000] px-2 Card-Shadow2 outline-none">
                   <input
                     type="text"

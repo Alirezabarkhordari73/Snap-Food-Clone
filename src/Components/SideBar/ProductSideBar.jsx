@@ -94,7 +94,7 @@ const ProductSideBar = ({ dataSource }) => {
                       </div>
                     </div>
                     <div className="w-1/3 h-full">
-                      <Map />
+                      <Map latlng={item.location} />
                     </div>
                   </div>
                   <div className="w-full flex justify-between items-center px-5 py-1 mt-3">

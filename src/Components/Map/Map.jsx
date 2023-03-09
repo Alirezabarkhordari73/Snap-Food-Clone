@@ -3,10 +3,6 @@ import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-const center = {
-  lat: 35.715298,
-  lng: 51.404343,
-};
 const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org/search?";
 const params = {
   q: "",
@@ -14,8 +10,8 @@ const params = {
   addressdetails: "addressdetails",
 };
 
-const Map = () => {
-  const [position, setPosition] = useState(center);
+const Map = ({ latlng }) => {
+  const [position, setPosition] = useState(latlng);
 
   const markerRef = useRef();
 
@@ -51,7 +47,7 @@ const Map = () => {
   }
 
   return (
-    <MapContainer center={center} zoom={14}>
+    <MapContainer center={position} zoom={14}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png"

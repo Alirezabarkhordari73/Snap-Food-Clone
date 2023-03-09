@@ -1562,6 +1562,7 @@ export const allResturantData = [
     deliveryType: "ارسال اکسپرس",
     shortDescription: " کباب, خورشت ,جوجه کباب",
     deliveryPrice: 12000,
+    location: { lat: 35.706012, lng: 51.429317 },
     rating: {
       ratingValue: 4.1,
       usersVotesCount: 161,
